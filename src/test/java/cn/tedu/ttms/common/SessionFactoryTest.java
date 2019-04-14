@@ -13,9 +13,9 @@ public class SessionFactoryTest {
 	
 		ApplicationContext ctx=
 		new ClassPathXmlApplicationContext(
-		"spring-mvc.xml",
+				"spring--mvc.xml",
 		"spring-pool.xml",
-		"spring-mybatis.xml");
+		"spring-mybatis.xml", "spring--shiro.xml","spring-redis.xml");
 		Object bean= ctx.getBean("sqlSessionFactory");
 		System.out.println(bean);
 		Assert.assertNotEquals(null, bean);

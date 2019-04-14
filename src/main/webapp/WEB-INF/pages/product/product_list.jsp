@@ -1,4 +1,4 @@
-<%@ page  contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page  contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="basePath" value="${pageContext.request.contextPath}"></c:set>
 <script type="text/javascript" src="${basePath}/js/product/product_list.js"></script>
@@ -59,7 +59,7 @@
 					   </tr>
 					</tbody>
 				</table>
-          <%@include file="../cn.tedu.ttms.common/page.jsp" %>
+          <%@include file="../common/page.jsp" %>
 			</div>
 		</form>
 </div> 

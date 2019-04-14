@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="basePath" value="${pageContext.request.contextPath}"></c:set>
 <div class="container">
@@ -8,6 +7,7 @@
 		<div class="page-title" style="padding-bottom: 5px">
 			<h3>旅游管理系统</h3>
 			<ol class="breadcrumb">
+				<li>系统管理</li>
 				<li>系统管理</li>
 				<li>用户管理</li>
 				<li class="active">添加用户</li>

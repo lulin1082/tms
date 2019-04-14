@@ -9,8 +9,8 @@ import javax.servlet.http.HttpSession;
 /**
  * 拦截器:用于session验证
  */
-public class SessionInterceptor implements HandlerInterceptor {
-    private String path;
+public class SessionInterceptor /*implements HandlerInterceptor*/ {
+   /* private String path;
 
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //先活动session对象
@@ -35,5 +35,5 @@ public class SessionInterceptor implements HandlerInterceptor {
 
     public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
         System.out.println(this.path);
-    }
+    }*/
 }

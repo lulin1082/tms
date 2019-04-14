@@ -44,7 +44,7 @@ public class RoleController {
     /**
      * 显示新增页面
      */
-    @RequestMapping("editRoleUI")
+    @RequestMapping("editUI")
     public String editRoleUI(){
         return "system/role_edit";
     }

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri= "http://java.sun.com/jsp/jstl/core" prefix= "c" %>
 <c:set var="basePath" value="${pageContext.request.contextPath}"></c:set>
 <script src="${basePath}/js/common/page.js"></script>
@@ -41,7 +40,7 @@
 					</thead>
 					<tbody id="tbody"></tbody>
 				</table>
-				<%@include file="../cn.tedu.ttms.common/page.jsp" %>
+				<%@include file="../common/page.jsp" %>
 			</div>
 		</form>
 	</div>

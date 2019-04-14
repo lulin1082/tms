@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.apache.shiro.authz.annotation.RequiresGuest;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -21,15 +22,13 @@ import cn.tedu.ttms.project.service.ProjectService;
  */
 @Controller
 @RequestMapping("/project")
-@RequiresGuest
 public class ProjectController {
 
 	@Autowired
 	private ProjectService projectService;
 
 
-	@RequiresGuest
-	@GetMapping("/listUI")
+ 	@RequestMapping("/listUI")
 	public String listUI(){
 		System.out.println("you get it");
 		return "project/project_list";
@@ -43,6 +42,7 @@ public class ProjectController {
 
 	@RequestMapping("/findPageObjects")
 	@ResponseBody
+	@RequiresPermissions("product:project:view")
 	public JsonResult doFindPageObjects(Project project,PageObject pageObject){//pageCurrent
 		Map<String,Object> map= projectService.findPageObjects(project,pageObject);
 	    return new JsonResult(map);//state=1,message=ok,data=map
@@ -50,6 +50,7 @@ public class ProjectController {
 	/**启用禁用*/
 	@RequestMapping("/doValidById")
 	@ResponseBody
+	@RequiresPermissions("product:project:update")
 	public JsonResult doValidById(String checkedIds,Integer valid){
 		projectService.validById(checkedIds, valid);
 		return new JsonResult();//state=1,message=ok;
@@ -57,6 +58,7 @@ public class ProjectController {
 	/**保存项目信息*/
 	@RequestMapping("/doSaveProject")
 	@ResponseBody
+	@RequiresPermissions("product:project:save")
 	public JsonResult doSaveProject(Project project){
 		projectService.saveObject(project);
 		return new JsonResult();
@@ -64,7 +66,7 @@ public class ProjectController {
 	/**查找项目信息*/
 	@RequestMapping("/doFindById")
 	@ResponseBody
-	@RequiresAuthentication
+	@RequiresPermissions("product:project:view")
 	public JsonResult doFindProjectById(
 			Long id){
 	    Map<String, Object> project= projectService.findObjectById(id);
@@ -73,6 +75,7 @@ public class ProjectController {
 	/**修改项目信息*/
 	@RequestMapping("/doUpdateProject")
 	@ResponseBody
+	@RequiresPermissions("product:project:update")
 	public JsonResult doUpdateProject(Project project){
 		projectService.updateObject(project);
 		return new JsonResult();//state=1,message="ok"

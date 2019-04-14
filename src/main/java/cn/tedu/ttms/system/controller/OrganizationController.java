@@ -13,16 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/org")
 public class OrganizationController {
 
-
-
     @RequestMapping("/editUI")
     public String editUI(){
-        return "system/org_edit";
+        return "system/organization_edit";
     }
 
     @RequestMapping("/listUI")
     public String listUI(){
-        return  "system/org_list";
+        return  "system/organization_list";
     }
    /* findObjects
     save

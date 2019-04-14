@@ -118,17 +118,15 @@ function doValidById(){
 function getCheckedIds(){
 	var checkedIds='';
 	//获得tbody对象中名字为checkedItem的input对象
-	$('tbody input[name="checkedItem"]')
-	//迭代input对象
-	.each(function(){
+	$('tbody input[name="checkedItem"]').each(function(){
 		//判定这个input对象是否是选中的input
 		if($(this).is(":checked")){//$(this).prop("checked")
 			//将选中的checkbox的值拼接为字符串
-			if(checkedIds==''){
-			checkedIds+=$(this).val();
-			}else{
-			checkedIds+=","+$(this).val();
-			}//"1,2,3,4,5";
+            if(checkedIds==''){
+                checkedIds+=$(this).val();
+            }else{
+                checkedIds+=","+$(this).val();
+            }//"1,2,3,4,5";
 		};
 	})
 	return checkedIds;

@@ -1,5 +1,4 @@
-<%@ page  contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page  contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 	<span id="pageId">
 		<a>首页</a>
 		<a class="pre">上一页</a>&nbsp;

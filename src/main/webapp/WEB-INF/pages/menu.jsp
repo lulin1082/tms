@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <div class="navbar navbar-inverse" role="navigation">
 	<div class="container-fluid">
@@ -42,9 +41,9 @@
 					</ul></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a  id="tipslogin"  href="toLogin.do?="+Maht.random(1000) >请登录</a></li>
+				<li><a  id="tipslogin"  href="toLogin.do?="+Maht.random(1000) >请登</a></li>
 				<li><a  id="welcome">欢迎您,${currentUser.usrname}</a></li>
-				<li><a href="/logout.do?t="+Maht.random(1000) >安全退出</a></li>
+				<li><a href="/logout.do">安全退出</a></li>
 			</ul>
 		</div>
 	</div>
@@ -54,52 +53,44 @@
 
 
 <script type="text/javascript">
-
-	console.log('aaaaaaaaaaaaaa');
 	console.info('getStart');
-	
     $('#load-project-id').click(function(){
-            debugger;
         var url="/project/listUI.do?t="+Math.random(1000);
         $("#container").load(url);
-        debugger;
     })
+
     $('#load-team-id').click(function(){
-        debugger;
         var url="team/listUI.do?t="+Math.random(1000);
         $("#container").load(url);
     })
     $('#load-type-id').click(function(){
-
-        debugger;
-
         var url="productType/listUI.do?t="+Math.random(1000);
         $("#container").load(url);
     })
     $('#load-role-id').click(function(){
-        debugger;
+
         var url="role/listUI.do?t="+Math.random(1000);
         $("#container").load(url);
     })
+
     $('#load-function-id').click(function(){
-        debugger;
+
         var url="function/listUI.do?t="+Math.random(1000);
         $("#container").load(url);
     })
+
     $('#load-user-id').click(function(){
-        debugger;
         var url="user/listUI.do?t="+Math.random(1000);
         $("#container").load(url);
     })
     $('#load-org-id').click(function(){
-        debugger;
+
 
         var url="org/ListUI.do?t="+Math.random(1000);
         $("#container").load(url);
     })
 	
 	$('#load-attachement-id').click(function(){
-        debugger;
         var url="attach/uploadUI.do?t="+Math.random(1000);
 		$("#container").load(url);
 	})

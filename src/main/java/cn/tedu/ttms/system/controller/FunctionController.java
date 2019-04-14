@@ -19,8 +19,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/function")
-@RequiresGuest
-public class FunctionController {
+ public class FunctionController {
 
 
     @Autowired

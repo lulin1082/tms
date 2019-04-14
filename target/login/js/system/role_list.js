@@ -91,7 +91,7 @@ function setTableRows(list){
 	    		  .replace('[roleId]',list[i].id)
 	    		  .replace('[name]',list[i].name)
 	    		  .replace('[note]',list[i].note));
-	    
+
 	    tBody.append(tr);
 	}
 }
@@ -101,7 +101,11 @@ function getCheckedId(){
 	var checkedId;
 	$('tbody input[name="checkedItem"]').each(function(){
 		if($(this).is(':checked')){  //或者用prop('checked')
-			checkedId=$(this).val();
+            if(checkedIds==''){
+                checkedIds+=$(this).val();
+            }else{
+                checkedIds+=","+$(this).val();
+            }//"1,2,3,4,5";
 		}
 	})
 	return checkedId;

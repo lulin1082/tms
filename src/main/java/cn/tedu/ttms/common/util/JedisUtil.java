@@ -29,12 +29,12 @@ public class JedisUtil {
         this.jedisPool = jedisPool;
     }
 
-    private Jedis getResorces(){
+    private Jedis getResource(){
         return jedisPool.getResource();
     }
 
     public byte[] set(byte[] key,byte[] value) {
-        Jedis jedis=getResorces();
+        Jedis jedis=getResource();
          try {
             jedis.set(key,value);
             return value;
@@ -44,7 +44,7 @@ public class JedisUtil {
     }
 
     public void expire(byte[] key,int i) {
-        Jedis jedis=getResorces();
+        Jedis jedis=getResource();
         try {
              jedis.expire(key, i);
         }finally {
@@ -54,7 +54,7 @@ public class JedisUtil {
     }
 
     public byte[] get(byte[] key) {
-        Jedis jedis=getResorces();
+        Jedis jedis=getResource();
         try{
            byte[] value= jedis.get(key);
             return value;
@@ -63,8 +63,8 @@ public class JedisUtil {
         }
     }
 
-    public void delte(byte[] key) {
-        Jedis jedis=getResorces();
+    public void delete(byte[] key) {
+        Jedis jedis=getResource();
         try {
             jedis.del(key);
         }finally {
@@ -72,17 +72,23 @@ public class JedisUtil {
         }
     }
 
-    public Set<byte[]> keys(byte[] keys) {
-        Jedis jedis=getResorces();
+   /* public Set<byte[]> keys(byte[] keys) {
+        Jedis jedis=getResource();
         try {
             return jedis.keys(keys);
         }finally {
             jedis.close();
         }
+    }*/
+
+     public Set<byte[]> keys(String prefix) {
+        try (Jedis jedis = getResource()) {
+            return jedis.keys((prefix + "*").getBytes());
+        }
     }
 
     /*public void keys(byte[] keys) {
-        Jedis jedis=getResorces();
+        Jedis jedis=getResource();
         try {
             jedis.keys(keys);
         }finally {

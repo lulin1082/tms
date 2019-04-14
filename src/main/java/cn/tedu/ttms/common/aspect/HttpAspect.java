@@ -27,9 +27,10 @@ import javax.servlet.http.HttpServletRequest;
 
 
 
-@Aspect
-@Component
+/*@Aspect
+@Component*/
 public class HttpAspect {
+/*
 
   private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
    // @Before(pointcut="execution(public * cn.tedu.ttms.*.controller.*(..))")
@@ -60,6 +61,7 @@ public class HttpAspect {
     public void doAfter() {
         System.out.println("11");
     }
+*/
 
 
   /*  private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
