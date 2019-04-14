@@ -17,6 +17,7 @@ import cn.tedu.ttms.team.service.TeamService;
 @Controller
 @RequestMapping("/team")
  public class TeamController {
+
 	@Resource
     private TeamService teamService;
 	

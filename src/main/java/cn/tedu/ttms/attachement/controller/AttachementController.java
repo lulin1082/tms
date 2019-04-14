@@ -23,8 +23,6 @@ import cn.tedu.ttms.common.web.JsonResult;
 
 @Controller
 @RequestMapping("/attach")
-
-@RequiresGuest
 public class AttachementController {
 
 	@Resource

@@ -19,8 +19,7 @@ import cn.tedu.ttms.product.service.ProductTypeService;
 
 @Controller
 @RequestMapping("/productType")
-@RequiresAuthentication
-public class ProductTypeController{
+ public class ProductTypeController{
 	@Resource
 	private ProductTypeService productTypeService;
 	
