@@ -7,181 +7,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6331eae4-c7d9-44b5-b3d0-c30483500a91" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_6_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/jedis/JedisUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/cache/RedisCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/realm/CustomSessionManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/realm/LogoutTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/realm/RedisSessionDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/system/entity/ActiveUser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring--mvc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/403.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/system/s.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/cn/tedu/ttms/common/util/JedisUtilTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/222.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/ttms2_0_Web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/ttms2_0_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/cache/LocalCacheManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/cache/RedisCache.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/configs/applicationContext111.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/cache/LocalCacheManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/cache/RedisCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/cache/RedisCacheManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/filter/RolesOrFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/realm/CustomRealm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/realm/IniRealmTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/realm/JdbcRealmTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/realm/ThisCustomRealm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/realm/UserRealm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/session/RedisSessionDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/session/UserSessionManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/spring-mvc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/cache/LocalCacheManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/cache/RedisCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/cache/RedisCacheManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/filter/RolesOrFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/realm/CustomRealm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/realm/IniRealmTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/realm/JdbcRealmTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/realm/ThisCustomRealm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/realm/UserRealm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/session/RedisSessionDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/session/UserSessionManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/spring-mvc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/commons-beanutils-1.8.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/commons-fileupload-1.2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/shiro-core-1.2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/shiro-spring-1.2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/shiro-web-1.2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/spring-aop-5.1.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/spring-beans-5.1.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/spring-context-5.1.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/spring-core-5.1.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/spring-expression-5.1.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/spring-jcl-5.1.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/spring-jdbc-5.1.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/spring-oxm-5.1.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/spring-test-5.1.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/spring-tx-5.1.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/spring-web-5.1.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/spring-webmvc-5.1.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/lib/tomcat-servlet-api-7.0.64.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/pages/login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/login/WEB-INF/pages/login2.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/cn.tedu.ttms/ttms2.0/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/cn.tedu.ttms/ttms2.0/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/cn/tedu/ttms/common/realm/CustomRealmTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/cn/tedu/ttms/common/realm/ThisCustomRealmTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ttms2.0-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_9_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sql/ttms.sql" afterPath="$PROJECT_DIR$/sql/ttms structure.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/cache/RedisCacheManager.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/cache/RedisCacheManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/filter/RolesOrFilter.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/filter/RolesOrFilter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/realm/CustomRealm.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/realm/CustomRealm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/realm/IniRealmTest.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/realm/IniRealmTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/realm/JdbcRealmTest.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/realm/JdbcRealmTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/realm/ThisCustomRealm.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/realm/ThisCustomRealm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/realm/UserRealm.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/realm/UserRealm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/session/RedisSessionDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/session/RedisSessionDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/session/UserSessionManager.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/shiro/session/UserSessionManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4jproperties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/spring-shiro.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring--shiro.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/cn/tedu/ttms/common/realm/CustomRealmTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/tedu/ttms/shiro/realm/CustomRealmTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/cn/tedu/ttms/common/realm/ThisCustomRealmTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/tedu/ttms/shiro/realm/ThisCustomRealmTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4jjes" afterPath="$PROJECT_DIR$/src/main/resources/log4jjes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/aspect/HttpAspect.class" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/aspect/HttpAspect.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/interceptors/SessionInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/interceptors/SessionInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/util/JedisUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/util/JedisUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/login/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/login/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/product/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/product/controller/ProductController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/project/controller/ProjectController.class" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/project/controller/ProjectController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/controller/FunctionController.class" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/controller/FunctionController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/controller/OrganizationController.class" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/controller/OrganizationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/controller/RoleController.class" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/controller/RoleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/team/controller/TeamController.class" afterPath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/team/controller/TeamController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4jjes" afterPath="$PROJECT_DIR$/target/classes/log4jjes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/aspect/HttpAspect.class" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/aspect/HttpAspect.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/interceptors/SessionInterceptor.class" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/interceptors/SessionInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/util/JedisUtil.class" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/common/util/JedisUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/login/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/login/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/product/controller/ProductController.class" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/product/controller/ProductController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/project/controller/ProjectController.class" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/project/controller/ProjectController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/system/controller/FunctionController.class" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/system/controller/FunctionController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/system/controller/OrganizationController.class" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/system/controller/OrganizationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/system/controller/RoleController.class" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/system/controller/RoleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/team/controller/TeamController.class" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/cn/tedu/ttms/team/controller/TeamController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/log4jjes" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/log4jjes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cn/tedu/ttms/common/BaseDaoTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cn/tedu/ttms/common/BaseDaoTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cn/tedu/ttms/common/SessionFactoryTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cn/tedu/ttms/common/SessionFactoryTest.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_6_11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_4_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/attachement/controller/AttachementController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/attachement/dao/AttachementDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/attachement/entity/Attachement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/attachement/service/AttachementService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/attachement/service/impl/AttachementServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/annotatins/MybatisRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/aspect/HttpAspect.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/controller/IndexController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/dao/BaseDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/encryption/SaltMd5Task.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/enums/ExceptionEnum.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/enums/Weather.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/exception/ApplicationException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/exception/AutoException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/exception/ControllerExceptionHandler2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/exception/SaveRuntimeException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/exception/UpdateRuntimeException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/handler/ControllerExceptionHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/handler/JSPWarning.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/interceptors/SessionInterceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/jedis/JedisTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/util/JedisUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/web/DateJsonTypeConvert.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/web/JsonResult.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/web/PageObject.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/web/SpringListUtil$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/common/web/SpringListUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/login/controller/LoginController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/login/dao/LoginDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/login/service/LoginService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/login/service/impl/LoginServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/product/controller/ProductController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/product/controller/ProductTypeController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/product/dao/ProductTypeDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/product/entity/ProductType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/product/service/ProductTypeService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/product/service/impl/ProductTypeServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/project/controller/ProjectController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/project/dao/ProjectDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/project/entity/Project.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/project/service/ProjectService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/project/service/impl/ProjectServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/controller/FunctionController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/controller/OrganizationController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/controller/RoleController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/controller/UserController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/dao/FunctionDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/dao/RoleDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/dao/RoleFunctionDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/dao/UserRoleDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/dao/UsersDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/entity/Companie.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/entity/Function.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/entity/Organization.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/entity/Role.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/entity/RoleFunction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/entity/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/entity/UserRole.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/service/FunctionService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/service/RoleService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/service/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/service/impl/FunctionServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/service/impl/RoleServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/system/service/impl/UserServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/team/controller/TeamController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/team/dao/TeamDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/team/entity/Team.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/team/service/TeamService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/tedu/ttms/team/service/impl/TeamServiceImpl.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ttms2_0_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ttms2_0_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/ttms_data.sql" afterPath="$PROJECT_DIR$/sql/ttms_data.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/aspect/HttpAspect.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/aspect/HttpAspect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/interceptors/SessionInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/interceptors/SessionInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/util/JedisUtil.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/common/util/JedisUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/login/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/login/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/product/controller/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/product/controller/ProductController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/project/controller/ProjectController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/project/controller/ProjectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/system/controller/FunctionController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/system/controller/FunctionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/system/controller/OrganizationController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/system/controller/OrganizationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/system/controller/RoleController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/system/controller/RoleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/team/controller/TeamController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/tedu/ttms/team/controller/TeamController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/jedis.properties" afterPath="$PROJECT_DIR$/src/main/resources/jedis.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-cache.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-pool.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-pool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-redis.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-redis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/user.ini" afterPath="$PROJECT_DIR$/src/main/resources/user.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/attachement/attachement.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/attachement/attachement.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/common/page.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/common/page.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login/login_edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login/login_edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/menu.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/menu.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/product/product_list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/product/product_list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/product/type_edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/product/type_edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/project/project_list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/project/project_list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/system/role_edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/system/role_edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/system/role_list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/system/role_list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/system/user_edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/system/user_edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/system/user_list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/system/user_list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/project/project_list.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/project/project_list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/system/role_list.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/system/role_list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cn/tedu/ttms/common/BaseDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/tedu/ttms/common/BaseDaoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cn/tedu/ttms/common/SessionFactoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/tedu/ttms/common/SessionFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/jedis.properties" afterPath="$PROJECT_DIR$/target/classes/jedis.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-pool.xml" afterPath="$PROJECT_DIR$/target/classes/spring-pool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-redis.xml" afterPath="$PROJECT_DIR$/target/classes/spring-redis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/user.ini" afterPath="$PROJECT_DIR$/target/classes/user.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/jedis.properties" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/jedis.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/spring-pool.xml" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/spring-pool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/spring-redis.xml" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/spring-redis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/classes/user.ini" afterPath="$PROJECT_DIR$/target/login/WEB-INF/classes/user.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/login/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/js/project/project_list.js" afterPath="$PROJECT_DIR$/target/login/js/project/project_list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/login/js/system/role_list.js" afterPath="$PROJECT_DIR$/target/login/js/system/role_list.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ttms2.0.iml" afterPath="$PROJECT_DIR$/ttms2.0.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -201,18 +100,7 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="206" column="20" lean-forward="false" selection-start-line="206" selection-start-column="20" selection-end-line="206" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -230,10 +118,10 @@
       <find>list</find>
       <find>saveSession</find>
       <find>aspe</find>
-      <find>shiro</find>
       <find>com</find>
       <find>1.3.2</find>
       <find>file</find>
+      <find>shiro</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -316,7 +204,17 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ttms2.0" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ttms2.0" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -511,17 +409,6 @@
               <item name="ttms" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
-            <path>
-              <item name="ttms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-context-support:4.1.9.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="ttms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-context-support:4.1.9.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-context-support-4.1.9.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -532,7 +419,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="pom&#9;FILE&#9;file://C:/WorkSpace/ttms/pom.xml&#10;pom.xml&#9;FILE&#9;file://C:/WorkSpace/ttms/pom.xml&#10;pro&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/pages/project/project_list.jsp&#10;role_li&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/pages/system/role_list.jsp&#10;Org&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/system/controller/OrganizationController.java&#10;Project&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/project/controller/ProjectController.java&#10;web&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/web.xml&#10;web.xml&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/web.xml&#10;web.xm&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/web.xml&#10;spring--mvc&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--mvc.xml&#10;projectC&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/project/controller/ProjectController.java&#10;project.&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/pages/project/project_list.jsp&#10;spring-s&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--shiro.xml&#10;springmvc&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--mvc.xml&#10;pr&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/project/controller/ProjectController.java&#10;Proje&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/project/controller/ProjectController.java&#10;UserRealm&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/shiro/realm/UserRealm.java&#10;reaml&#9;PSI&#9;JAVA://org.apache.commons.net.io.CopyStreamListener&#10;spring&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--mvc.xml&#10;pom.xm&#9;FILE&#9;file://C:/WorkSpace/ttms/pom.xml&#10;springmv&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--mvc.xml&#10;list.jsp&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/pages/system/function_list.jsp&#10;403&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/403.html&#10;shiro&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--shiro.xml&#10;springs&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--shiro.xml&#10;spring-mvc&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--mvc.xml&#10;menu.jsp&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/pages/menu.jsp&#10;Redis&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/shiro/session/RedisSessionDao.java&#10;projecl&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/js/project/project_list.js&#10;role.js&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/js/system/role_list.js&#10;menu.js&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/pages/menu.jsp&#10;spring-sh&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring-shiro.xml&#10;User&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/common/realm/UserRealm.java&#10;spring-mvc.xml&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring-mvc.xml&#10;spring-v&#9;null&#9;null&#10;sp&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring-shiro.xml&#10;LoginC&#9;PSI&#9;JAVA://cn.tedu.ttms.login.controller.LoginController&#10;UserC&#9;PSI&#9;JAVA://cn.tedu.ttms.system.controller.UserController&#10;user.&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/user.ini" />
+    <property name="SearchEverywhereHistoryKey" value="pom.xlml&#9;null&#9;null&#10;pom&#9;FILE&#9;file://C:/WorkSpace/ttms/pom.xml&#10;pom.xml&#9;FILE&#9;file://C:/WorkSpace/ttms/pom.xml&#10;pro&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/pages/project/project_list.jsp&#10;role_li&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/pages/system/role_list.jsp&#10;Org&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/system/controller/OrganizationController.java&#10;Project&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/project/controller/ProjectController.java&#10;web&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/web.xml&#10;web.xml&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/web.xml&#10;web.xm&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/web.xml&#10;spring--mvc&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--mvc.xml&#10;projectC&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/project/controller/ProjectController.java&#10;project.&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/pages/project/project_list.jsp&#10;spring-s&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--shiro.xml&#10;springmvc&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--mvc.xml&#10;pr&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/project/controller/ProjectController.java&#10;Proje&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/project/controller/ProjectController.java&#10;UserRealm&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/shiro/realm/UserRealm.java&#10;reaml&#9;PSI&#9;JAVA://org.apache.commons.net.io.CopyStreamListener&#10;spring&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--mvc.xml&#10;pom.xm&#9;FILE&#9;file://C:/WorkSpace/ttms/pom.xml&#10;springmv&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--mvc.xml&#10;list.jsp&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/pages/system/function_list.jsp&#10;403&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/403.html&#10;shiro&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--shiro.xml&#10;springs&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--shiro.xml&#10;spring-mvc&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring--mvc.xml&#10;menu.jsp&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/pages/menu.jsp&#10;Redis&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/shiro/session/RedisSessionDao.java&#10;projecl&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/js/project/project_list.js&#10;role.js&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/js/system/role_list.js&#10;menu.js&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/webapp/WEB-INF/pages/menu.jsp&#10;spring-sh&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring-shiro.xml&#10;User&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/java/cn/tedu/ttms/common/realm/UserRealm.java&#10;spring-mvc.xml&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring-mvc.xml&#10;spring-v&#9;null&#9;null&#10;sp&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/spring-shiro.xml&#10;LoginC&#9;PSI&#9;JAVA://cn.tedu.ttms.login.controller.LoginController&#10;UserC&#9;PSI&#9;JAVA://cn.tedu.ttms.system.controller.UserController&#10;user.&#9;FILE&#9;file://C:/WorkSpace/ttms/src/main/resources/user.ini" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15917969" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -836,7 +723,7 @@
       <workItem from="1555222312792" duration="2038000" />
       <workItem from="1555243759980" duration="3019000" />
       <workItem from="1555246806690" duration="121000" />
-      <workItem from="1555247233244" duration="2871000" />
+      <workItem from="1555247233244" duration="3098000" />
     </task>
     <servers />
   </component>
@@ -858,7 +745,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260270000" />
+    <option name="totallyTimeSpent" value="260497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -866,7 +753,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8245315" sideWeight="0.31089258" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27597955" sideWeight="0.49546143" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18154311" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19515885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36967632" sideWeight="0.49394855" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -884,7 +771,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39693356" sideWeight="0.4924357" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3253833" sideWeight="0.49394855" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3253833" sideWeight="0.49394855" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel remote servers log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39693356" sideWeight="0.5045386" order="15" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30635402" sideWeight="0.8135135" order="3" side_tool="false" content_ui="combo" x="546" y="70" width="347" height="720" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
@@ -1011,7 +898,7 @@
         <state relative-caret-position="105">
           <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
           <folding>
-            <marker date="1555127876806" expanded="true" signature="1432:2664" ph="..." />
+            <marker date="1555250566508" expanded="true" signature="1432:2664" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1347,8 +1234,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="206" column="20" lean-forward="false" selection-start-line="206" selection-start-column="20" selection-end-line="206" selection-end-column="20" />
+        <state relative-caret-position="200">
+          <caret line="372" column="47" lean-forward="true" selection-start-line="372" selection-start-column="47" selection-end-line="372" selection-end-column="47" />
           <folding />
         </state>
       </provider>
