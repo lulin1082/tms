@@ -42,7 +42,7 @@ public class UserController {
     /**
      * 跳转到用户编辑页面（新增/修改）
      */
-    @RequestMapping("editUserUI")
+    @RequestMapping("editUI")
     public String editUser(){
         return "system/user_edit";
     }
