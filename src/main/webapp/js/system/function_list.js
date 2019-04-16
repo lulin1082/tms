@@ -1,21 +1,21 @@
 var SUCCESS = 1;
-var Menu = {
-	id : "menuTable",
+var Function = {
+	id : "functionTable",
 	table : null,
 	layerIndex : -1
 };
 
 //新增
-$('#formHead').on('click','.btn_add',showAddMenuPage)
+$('#formHead').on('click','.btn_add',showAddFunctionPage)
 //修改
-$('#formHead').on('click','.btn_update',showEditMenuPage)
+$('#formHead').on('click','.btn_update',showEditFunctionPage)
 //删除
-$('#formHead').on('click','.btn_delete',deleteMenu)
+$('#formHead').on('click','.btn_delete',deleteFunction)
 
 /**
  * 初始化表格的列
  */
-Menu.initColumn = function() {
+Function.initColumn = function() {
 	var columns = [
 			{
 				field : 'selectItem',
@@ -84,41 +84,44 @@ Menu.initColumn = function() {
 	return columns;
 };
 
-loadMenuTable();
+loadFunctionTable();
 
-function loadMenuTable() {
-	var colunms = Menu.initColumn();
-	var table = new TreeTable(Menu.id,"menu/findObjects.do", colunms);
+function loadFunctionTable() {
+	var colunms = Function.initColumn();
+	var table = new TreeTable(Function.id,"function/findObjects.do", colunms);
 	table.setExpandColumn(2);
 	table.setIdField("id");
 	table.setCodeField("id");
 	table.setParentCodeField("parentId");
 	table.setExpandAll(false);
 	table.init();
-	Menu.table = table;
+	Function.table = table;
 }
 
 //显示新增菜单页面
-function showAddMenuPage(){
-	var url ='menu/editUI.do';
+function showAddFunctionPage(){
+	var url ='function/editUI.do';
 	$('#container').load(url);
 }
 
 //删除菜单项
-function deleteMenu(){
+
+
+
+function deleteFunction(){
 	debugger
-	var selected = $('#menuTable').bootstrapTreeTable('getSelections');
+	var selected = $('#functionTable').bootstrapTreeTable('getSelections');
 	if (selected.length == 0) {
         alert("请选择一条记录");
         return false;
     } 
-	var menuId = selected[0].id
-	var param = {'menuId':menuId};
-	var url = 'menu/deleteMenu.do';
+	var functionId = selected[0].id
+	var param = {'id':functionId};
+	var url = 'function/deleteFunction.do';
 	$.post(url,param,function(result){
 		if(result.state==SUCCESS){
 			alert('删除成功！');
-			loadMenuTable();
+			loadFunctionTable();
 		}else{
 			alert(result.message);
 		}
@@ -126,15 +129,15 @@ function deleteMenu(){
 }
 
 //显示修改菜单页面
-function showEditMenuPage(){
-	var selected = $('#menuTable').bootstrapTreeTable('getSelections');
+function showEditFunctionPage(){
+	var selected = $('#functionTable').bootstrapTreeTable('getSelections');
 	if (selected.length == 0) {
         alert("请选择一条记录");
         return false;
     }
 
-	var menuId = selected[0].id
-	$('#container').data('menuId',menuId);
-	var url ='menu/editUI.do';
+	var functionId = selected[0].id
+	$('#container').data('functionId',functionId);
+	var url ='function/editUI.do';
 	$('#container').load(url);
 }

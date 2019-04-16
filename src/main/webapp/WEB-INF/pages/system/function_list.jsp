@@ -28,7 +28,7 @@
         </div>
         <!-- 列表显示内容 -->
         <div class="row col-md-12">
-            <table id="menuTable" data-click-to-select="true">
+            <table id="functionTable" data-click-to-select="true">
                 <thead>
                 <tr>
                     <th data-field="selectItem" data-checkbox="true"></th>

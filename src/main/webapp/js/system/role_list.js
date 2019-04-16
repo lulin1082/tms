@@ -38,7 +38,7 @@ function showEditRolePage(){
 		return;
 	}
 	$('#container').data('roleId',selectedOption);
-	$('#container').load('role/editRoleUI.do');
+	$('#container').load('role/editUI.do');
 }
 
 //显示新增页面

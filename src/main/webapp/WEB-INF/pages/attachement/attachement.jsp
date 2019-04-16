@@ -3,6 +3,9 @@
 <c:set var="basePath" value="${pageContext.request.contextPath}"></c:set>
 <script type="text/javascript" src="${basePath}/js/attach/attach.js"></script>
 <script type="text/javascript" src="${basePath}/js/common/page.js"></script>
+<script type="text/javascript" src="${basePath}/jquery/jquery.form.js"></script>
+<script type="text/javascript" src="${basePath}/jquery/jquery.validate.min.js"></script>
+
 <div class="container">
 	   <!-- 页面导航 -->
 	   <div class="page-header">

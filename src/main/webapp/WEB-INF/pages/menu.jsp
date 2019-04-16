@@ -86,7 +86,7 @@
     $('#load-org-id').click(function(){
 
 
-        var url="org/ListUI.do?t="+Math.random(1000);
+        var url="org/listUI.do?t="+Math.random(1000);
         $("#container").load(url);
     })
 	
@@ -94,6 +94,8 @@
         var url="attach/uploadUI.do?t="+Math.random(1000);
 		$("#container").load(url);
 	})
+
+
 
 </script>
 

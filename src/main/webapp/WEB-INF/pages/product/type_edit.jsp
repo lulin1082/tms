@@ -28,7 +28,7 @@
 					<div class="col-sm-2 control-label">上级分类：</div>
 					<div class="col-sm-10">
 						<input type="text" id="parentNameId" readonly="readonly" placeholder="一级分类"
-							class="form-control required dynamicClear load-cn.tedu.ttms.product-type" style="cursor: pointer;">
+							class="form-control required dynamicClear load-product-type" style="cursor: pointer;">
 					</div>
 				</div>
 
@@ -69,7 +69,7 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript" src="${basePath}/js/cn.tedu.ttms.product/type_edit.js"></script>
+<script type="text/javascript" src="${basePath}/js/product/type_edit.js"></script>
 
 
 

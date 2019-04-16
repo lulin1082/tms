@@ -54,6 +54,9 @@ public class UserRealm extends AuthorizingRealm {
         Set<String> functionSet = getPermissionsByUsername(userId);
         Set<String> roleSet = getRolesByUserName(userId);
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
+        System.out.println("用户的Role集"+roleSet.toString());
+        System.out.println("用户的Function集"+functionSet.toString());
+
         simpleAuthorizationInfo.setRoles(roleSet);
         simpleAuthorizationInfo.setStringPermissions(functionSet);
         return simpleAuthorizationInfo;

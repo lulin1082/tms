@@ -15,9 +15,6 @@ public interface  BaseDao<T> {
 
 	int insertObject(@Param("entity") T t);
 	int updateObject(@Param("entity")T t);
-
-
-
 	int save(@Param("entity")T t);
 	int saveObject(Map<String, Object> map);
 

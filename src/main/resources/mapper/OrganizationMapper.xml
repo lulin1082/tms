@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+ classpath:mapper/ProjectMapper.xml
+ -->
+<mapper namespace="cn.tedu.ttms.system.dao.OrganizationDao">
+
+    <select id="findOrgObjects" resultType="Map">
+       select o1.id,o1.name,o1.code,o2.name AS `parentName`,o1.valid from sys_organizations o1,sys_organizations o2 where o1.parentId = o2.id;
+    </select>
+
+
+
+</mapper> 

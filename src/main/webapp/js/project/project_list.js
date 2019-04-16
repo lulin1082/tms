@@ -40,7 +40,7 @@ function doGetObjects(){
   if(pageCurrent){params.pageCurrent=pageCurrent};
   console.log(params.name+"/"+params.valid+"/"+pageCurrent);
   $.post(url,params,function(result){//map{"list":[{},{}],"pageObject":{"pageCount":2,...}}
-	 console.log(JSON.stringify(result.data.list));
+	  console.log(JSON.stringify(result.data.list));
 	 if(result.state==1){
 	 //设置表格tabody中的内容
 	 setTableRows(result.data.list);//map中的list(根据key取值list)

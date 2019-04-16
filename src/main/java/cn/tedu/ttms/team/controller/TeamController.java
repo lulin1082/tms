@@ -54,8 +54,7 @@ import cn.tedu.ttms.team.service.TeamService;
 	@RequestMapping("/doFindPrjIdNames")
 	@ResponseBody
 	public JsonResult doFindProjectIdAndNames(){
-		List<Map<String,Object>> map=
-		teamService.findProjectIdAndNames();
+		List<Map<String,Object>> map= teamService.findProjectIdAndNames();
 		return new JsonResult(map);
 	}
 }

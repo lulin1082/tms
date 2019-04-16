@@ -22,7 +22,6 @@ import cn.tedu.ttms.attachement.service.AttachementService;
 @Service
 public class AttachementServiceImpl implements AttachementService{
 
-	
 	@Resource
 	private AttachementDao attachementDao;
 

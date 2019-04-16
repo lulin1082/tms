@@ -25,8 +25,7 @@
      LIMIT #{startIndex},#{pageSize}
   </select>
   <!-- 统计记录数(要根据记录数计算总页数) -->
-  <select id="getRowCount" 
-      resultType="java.lang.Integer">
+  <select id="getRowCount" resultType="java.lang.Integer">
       select count(*)
       from tms_teams t join tms_projects p
       on t.projectId=p.id
@@ -41,12 +40,10 @@
   </select>
 
   <!-- 插入项目信息 -->
-  <insert id="insertObject" 
-   parameterType="cn.tedu.ttms.team.entity.Team">
+  <insert id="insertObject" parameterType="cn.tedu.ttms.team.entity.Team">
    
       INSERT INTO tms_teams
       (
-      id,
       name,
       projectId,
       valid,
@@ -67,4 +64,7 @@
       NOW(),
       NOW()) 
   </insert>
+
+
+
  </mapper> 

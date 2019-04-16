@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("#queryFormId").on("click",".btn-attachement",loadAttachement);
+    $("#queryFormId").on("click",".btn-attachement",loadAttachement);
 });
 /*加载产品附件页面*/
 function loadAttachement(){

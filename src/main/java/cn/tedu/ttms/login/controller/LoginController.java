@@ -44,13 +44,20 @@ public class LoginController {
     public JsonResult confirmUser(String username, String userpwd, boolean remeber) {
         Subject subject = SecurityUtils.getSubject();
         //System.out.println("用户名" + username + "密码" + userpwd);
+
         if (!subject.isAuthenticated()) {
+            System.out.println("没有记录，需要 重新 认证");
             UsernamePasswordToken token = new UsernamePasswordToken(username, userpwd);
             token.setRememberMe(remeber);
-            subject.login(token);
+            try {
+                subject.login(token);
+            } catch (AuthenticationException e) {
+                 throw new RuntimeException("并没有认证");
+            } finally {
+            }
         }
         boolean isAuthenticated = subject.isAuthenticated();
-        System.out.println("认证了:  "+isAuthenticated);
+        System.out.println("认证了吗？ :  "+isAuthenticated);
         return new JsonResult();
     }
 
