@@ -10,15 +10,15 @@ $(document).ready(function(){
 
 //获得team记录信息
 function doGetObjects(){
-  var url="org/findObjects.do";
+  var url="org/findPageObjects.do";
   var params=getQueryParamValues();
   var parentId=$("#modal-dialog").data("parentId");
   console.log("queryFormId.parentId="+parentId);
   if(parentId)
   {
-  	params.parentId=parentId;
+  	//params.parentId=parentId;
   }
-  var currentPage=$("#pagination").data('curPage');
+  var currentPage=$("#pagination").data('pageCurrent');
   if(currentPage)params.pageCurrent=currentPage;
   $.post(url,params,function(result){
 	   if(result.state==1){

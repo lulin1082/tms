@@ -17,15 +17,11 @@ public interface  BaseDao<T> {
 	int updateObject(@Param("entity")T t);
 	int save(@Param("entity")T t);
 	int saveObject(Map<String, Object> map);
-
 	int getRowCounts(@Param(value="entity") T t);
-
 /*
 	int deletObject(Integer id);
 */
 	int deletObject(Long id);
-
-
 	int changeState(@Param("id")Long id, @Param("valid")Integer valid);
 /*
 	int changeState(@Param("id")Integer id, @Param("valid")Integer valid);
@@ -39,8 +35,8 @@ public interface  BaseDao<T> {
 */
 	List<Integer> findRelatedIdListById(Long id);
 
-	List<Map<String,Object>> findObjects(@Param(value="entity") T entity, @Param(value="pageObject") PageObject pageObject);
- 	Map<String,Object> findObjectById(Long id);
+	List<Map<String,Object>> findPageObjects(@Param(value="entity") T entity, @Param(value="pageObject") PageObject pageObject);
+ 	Map<String,Object> findObjectById(@Param(value = "id") Long id);
 
 	T findById(@Param(value = "id") Long id);
 }

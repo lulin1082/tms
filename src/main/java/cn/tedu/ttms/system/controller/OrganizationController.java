@@ -1,7 +1,10 @@
 package cn.tedu.ttms.system.controller;
 
 import cn.tedu.ttms.common.web.JsonResult;
+import cn.tedu.ttms.common.web.PageObject;
+import cn.tedu.ttms.system.entity.Organization;
 import cn.tedu.ttms.system.service.OrganizationService;
+import com.github.pagehelper.Page;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -37,15 +40,66 @@ public class OrganizationController {
         return  "system/organization_list";
     }
 
-
-    @RequestMapping("findObjects")
+    @RequestMapping("/findPageObjects")
     @ResponseBody
-    public JsonResult findObject(){
-        List<Map<String, Object>> list = organizationService.findObject();
+    public JsonResult findObject(Organization organization, PageObject pageObject){
+        List<Map<String, Object>> list = organizationService.findPageObject(organization,pageObject);
         return new JsonResult(list);
     }
-   /* findObjects
-    save
+
+    @RequestMapping("/findOrgObejcts")
+    @ResponseBody
+    public JsonResult findObect( Organization organization, PageObject pageObject  ){
+        List<Map<String, Object>> list= organizationService.findOrgObject( organization,  pageObject );
+        return new JsonResult(list);
+    }
+
+
+    @RequestMapping("save")
+    @ResponseBody
+    public JsonResult save(Organization organization){
+        organizationService.saveObejct(organization);
+        return new JsonResult();
+    }
+
+    @RequestMapping("update")
+    @ResponseBody
+    public JsonResult update(Organization organization){
+      /*  	"id":$('#modal-dialog').data('id'),
+		"name":$('#nameId').val(),
+		"code":$('#codeId').val(),
+		"parentId": $("#modal-dialog").data("parentId"),
+	    "valid":$('input[name="valid"]:checked').val(),
+	    "note":$('#noteId').val()
+	 */
+/*   id name code parentId valid note*/
+        organizationService.update(organization);
+        return new JsonResult();
+    }
+
+    @RequestMapping("findById")
+    @ResponseBody
+    public JsonResult update(int id){
+      /*  	"id":$('#modal-dialog').data('id'),
+		"name":$('#nameId').val(),
+		"code":$('#codeId').val(),
+		"parentId": $("#modal-dialog").data("parentId"),
+	    "valid":$('input[name="valid"]:checked').val(),
+	    "note":$('#noteId').val()
+	 */
+/*   id name code parentId valid note*/
+        Map<String,Object> map=organizationService.findById(id);
+        return new JsonResult(map);
+    }
+
+    @RequestMapping("doValidById")
+    @ResponseBody
+    public  JsonResult doValidById(String ids,int valid){
+        organizationService.doValidById(ids,valid);
+        return new JsonResult();
+    }
+
+ /* findObjects
     update
             findById
     doValidById*/

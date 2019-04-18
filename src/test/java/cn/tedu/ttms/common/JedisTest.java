@@ -8,7 +8,7 @@ import redis.clients.jedis.JedisPool;
  * @Date: 3/28/2019 3:26 PM
  * @Version 1.0
  */
-public class JedisTest extends BaseDaoTest{
+public class JedisTest extends BaseTest {
 
     @Test
     public void TestJediaPool(){

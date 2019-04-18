@@ -1,6 +1,5 @@
 $(document).ready(function(){
-  $("#modal-dialog").on("click",".ok",
-		  doSaveOrUpdate);
+  $("#modal-dialog").on("click",".ok",doSaveOrUpdate);
   doInitProjectIdAndNames();
   
 });
@@ -18,6 +17,9 @@ function doInitProjectIdAndNames(){
 		}
 	})
 }
+
+//doInitProjectIdAndNames doInitProjectIdAndNames
+
 //填充select选项
 function setProjectSelectOptions(list){
 	var selectObj=$("#selectId");
@@ -26,6 +28,9 @@ function setProjectSelectOptions(list){
 	selectObj.append(optionObj.replace("[id]",list[i].id).replace("[name]",list[i].name));
 	}
 }
+
+
+
 //保存或修改数据
 function doSaveOrUpdate(){
 	var url="team/doSaveObject.do";

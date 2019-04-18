@@ -30,8 +30,8 @@ public class AttachementServiceImpl implements AttachementService{
 			MultipartFile mFile,String serverPath) {
 		//1.上传文件
 		//1.1获得文件名
-		String oFileName=mFile.getOriginalFilename();
-		System.out.println("oFileName="+oFileName);
+		String orginFileName=mFile.getOriginalFilename();
+		System.out.println("orginFileName="+orginFileName);
 		byte[] fileBytes;
 		File dest;//目标文件(上传以后存储的文件)
 		String fileDigest;//文件摘要　
@@ -48,7 +48,7 @@ public class AttachementServiceImpl implements AttachementService{
 		String newFileName=
 		UUID.randomUUID().toString()+"."+
 		//获得文件名字扩展名
-	    FilenameUtils.getExtension(oFileName);//文件扩展名
+	    FilenameUtils.getExtension(orginFileName);//文件扩展名
 
 		String realPath=serverPath+"/uploads/"+dateStr+"/"+newFileName;
 		dest=new File(realPath);
@@ -65,7 +65,7 @@ public class AttachementServiceImpl implements AttachementService{
 		Attachement t=new Attachement();
 
 		t.setTitle(title);
-		t.setFileName(oFileName);
+		t.setFileName(orginFileName);
 		t.setFilePath(dest.getPath());//文件存储的真实路径
 		t.setAthType(athType);//1
 		t.setBelongId(belongId);//1

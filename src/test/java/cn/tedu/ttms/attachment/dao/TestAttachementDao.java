@@ -1,8 +1,8 @@
 package cn.tedu.ttms.attachment.dao;
 
-import cn.tedu.ttms.common.BaseDaoTest;
+import cn.tedu.ttms.common.BaseTest;
 
-public class TestAttachementDao extends BaseDaoTest {
+public class TestAttachementDao extends BaseTest {
 
 	public void testInsertObject(){
 	//	AttachementDao dao=(AttachementDao) ctx.getBean("attachementDao");

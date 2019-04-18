@@ -1,18 +1,15 @@
 package cn.tedu.ttms.login.service;
 
-import cn.tedu.ttms.common.BaseDaoTest;
+import cn.tedu.ttms.common.BaseTest;
 import cn.tedu.ttms.system.entity.User;
-import cn.tedu.ttms.system.service.UserService;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @Author: lulin
  * @Date: 3/28/2019 9:03 PM
  * @Version 1.0
  */
-public class LoginServiceTest extends BaseDaoTest {
+public class LoginServiceTest extends BaseTest {
 
     @Test
     public void exist(){

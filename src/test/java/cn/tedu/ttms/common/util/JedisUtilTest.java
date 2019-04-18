@@ -1,17 +1,15 @@
 package cn.tedu.ttms.common.util;
 
-import cn.tedu.ttms.common.BaseDaoTest;
+import cn.tedu.ttms.common.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @Author: lulin
  * @Date: 4/1/2019 11:12 PM
  * @Version 1.0
  */
-public class JedisUtilTest extends BaseDaoTest {
+public class JedisUtilTest extends BaseTest {
     @Test
     public void setJedisPool() throws Exception {
 

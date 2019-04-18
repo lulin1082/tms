@@ -1,11 +1,9 @@
 package cn.tedu.ttms.system.dao;
 
 import cn.tedu.ttms.system.entity.User;
-import cn.tedu.ttms.common.BaseDaoTest;
+import cn.tedu.ttms.common.BaseTest;
 import org.junit.Test;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -13,7 +11,7 @@ import java.util.List;
  * @Date: 3/28/2019 1:54 PM
  * @Version 1.0
  */
-public class UsersDaoTest extends BaseDaoTest {
+public class UsersDaoTest extends BaseTest {
 
 
     @Test

@@ -29,13 +29,14 @@
         <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
         <!-- 整合log4j2,目的是便于我们根据日志的输出调试代码 一般添加完依赖会在类路径添加一个log4j2.xml文件 -->
 
-        <dependency>
+        <!--log4j相关配置开始-->
+
+         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>${log4j.version}</version>
         </dependency>
 
-        <!--log4j相关配置开始-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -118,6 +119,12 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
             <version>${org.springframework.version}</version>
         </dependency>
 

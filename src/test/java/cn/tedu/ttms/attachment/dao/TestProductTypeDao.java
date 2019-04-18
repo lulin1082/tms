@@ -8,9 +8,9 @@ import org.junit.Test;
 
 import cn.tedu.ttms.product.dao.ProductTypeDao;
 import cn.tedu.ttms.product.entity.ProductType;
-import cn.tedu.ttms.common.BaseDaoTest;
+import cn.tedu.ttms.common.BaseTest;
 
-public class TestProductTypeDao extends BaseDaoTest {
+public class TestProductTypeDao extends BaseTest {
 
 	@Test
 	public void testFindObjects(){

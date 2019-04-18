@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public  Map<String, Object> findObjects(User user, PageObject pageObject) {
-        List<Map<String, Object>> list =  userDao.findObjects(user, pageObject);
+        List<Map<String, Object>> list =  userDao.findPageObjects(user, pageObject);
         pageObject.setRowCount(userDao.getRowCounts(user));
         Map<String,Object> map=new HashMap<String,Object>();
         map.put("list", list);

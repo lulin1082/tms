@@ -31,13 +31,13 @@ public interface ProjectDao extends BaseDao<Project> {
     /**
      * 分页查询项目信息
      */
-    public List<Project>
-    findPageObjects(@Param("project") Project project, @Param("pageObject") PageObject pageObject);
+   /* public List<Project>
+    findPageObjects(@Param("project") Project project, @Param("pageObject") PageObject pageObject);*/
 
     /**
      * 获得表中的记录数
      */
-    public int getRowCount(Project project);
+    //public int getRowCount(Project project);
 
     /**
      * 禁用启用记录数

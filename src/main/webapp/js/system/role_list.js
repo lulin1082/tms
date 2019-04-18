@@ -5,7 +5,7 @@ doGetObjects()
 //条件查询
 $('#formHead').on('click','.btn-search',criteriaDoGetObjects)
 //新增
-$('#formHead').on('click','.btn_add',showAddRolePage)
+$('#formHead').on('click','.role_add',showAddRolePage2)
 //修改
 $('#formHead').on('click','.btn_update',showEditRolePage)
 //删除
@@ -42,9 +42,9 @@ function showEditRolePage(){
 }
 
 //显示新增页面
-function showAddRolePage(){
-	var url = 'role/editRoleUI.do';
-	$('#container').load(url);
+function showAddRolePage2(){
+	var url="role/editUI.do";
+     $('#container').load(url);
 }
 
 //条件查询  -- 每次条件查询要将当前也设为1

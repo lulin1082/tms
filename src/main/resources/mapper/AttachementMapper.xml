@@ -17,4 +17,20 @@
            select * from tms_attachements where fileDisgest=#{fileDigest};
     </select>
 
+    <insert id="insertObject" parameterType="cn.tedu.ttms.attachement.entity.Attachement">
+    INSERT  INTO tms_attachements (title,fileName,filePath,athType,belongId,contentType,fileDisgest,createdTime,createdUser,modifiedUser)VALUES (
+        #{entity.title},
+        #{entity.fileName},
+        #{entity.filePath},
+        #{entity.athType},
+        #{entity.belongId},
+       #{entity.contentType},
+       #{entity.fileDigest},
+       NOW(),
+       #{entity.createUser},
+       #{entity.modifyUser}
+        )
+
+    </insert>
+
 </mapper> 

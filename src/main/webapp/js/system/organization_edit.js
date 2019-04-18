@@ -34,7 +34,7 @@ function doGetFormParameterValues(){
 		"code":$('#codeId').val(),
 		"parentId": $("#modal-dialog").data("parentId"),
 	    "valid":$('input[name="valid"]:checked').val(),
-	    "note":$('#noteId').val(),
+	    "note":$('#noteId').val()
 	}
 	return params;
 }

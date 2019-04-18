@@ -16,6 +16,9 @@ function showEditDialog(){
 	});
 }
 
+
+
+
 function doGetObjects(){
 	//1.url
 	var url="team/doFindPageObjects.do"

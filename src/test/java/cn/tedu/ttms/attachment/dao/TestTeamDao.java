@@ -4,7 +4,7 @@ package cn.tedu.ttms.attachment.dao;
 import java.util.List;
 import java.util.Map;
 
-import cn.tedu.ttms.common.BaseDaoTest;
+import cn.tedu.ttms.common.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ import cn.tedu.ttms.common.web.PageObject;
 import cn.tedu.ttms.team.dao.TeamDao;
 import cn.tedu.ttms.team.entity.Team;
 
-public class TestTeamDao extends BaseDaoTest {
+public class TestTeamDao extends BaseTest {
 	@Test
 	public void testFindPageObjects(){
 		TeamDao dao=(TeamDao)ctx.getBean("teamDao");

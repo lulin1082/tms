@@ -21,7 +21,7 @@
 				<ul class="list-unstyled list-inline">
 					<li><input type="text" id="roleName" class="form-control" placeholder="角色名称"></li>
 					<li class='O1'><button type="button" class="btn btn-primary btn-search" >查询</button></li>
-					<li class='O2'><button type="button" class="btn btn-primary btn_add">新增</button></li>
+					<li class='O2'><button type="button" class="btn btn-primary btn_add role_add">新增</button></li>
 					<li class='O3'><button type="button" class="btn btn-primary btn_update">修改</button></li>
 					<li class='O4'><button type="button" class="btn btn-primary btn_delete">删除</button></li>
 				</ul>

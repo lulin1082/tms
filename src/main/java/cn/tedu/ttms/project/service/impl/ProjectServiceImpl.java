@@ -44,19 +44,16 @@ public class ProjectServiceImpl implements ProjectService {
      *                   2)此参数中应包含pageSize
      */
     @Override
-    public Map<String, Object>
-    findPageObjects(Project project, PageObject pageObject) {
+    public Map<String, Object> findPageObjects(Project project, PageObject pageObject) {
         //1.获得页面表格中要显示的数据
-        List<Project> list = projectDao.findPageObjects(project, pageObject);
-        //List<Map<String,Object>> findObjects(@Param(value="entity") T entity, @Param(value="pageObject") PageObject pageObject);
+        List<Map<String,Object>> list = projectDao.findPageObjects(project,pageObject);
         //2.获得表中记录数并计算页数
-        int rowCount = projectDao.getRowCount(project);
+        int rowCount = projectDao.getRowCounts(project);
         pageObject.setRowCount(rowCount);
         //3.构建map对象封装从dao层获得的数据
-        Map<String, Object> map =
-                new HashMap<String, Object>();
-        map.put("list", list);//记录信息
-        map.put("pageObject", pageObject);//分页数据
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("list", list);                       //记录信息
+        map.put("pageObject", pageObject);          //分页数据
         return map;
     }
 
@@ -89,7 +86,7 @@ public class ProjectServiceImpl implements ProjectService {
             throw new NullPointerException("id can not be null");
         Map<String, Object> pro = projectDao.findObjectById(id);
         if (pro == null)
-            throw new SaveRuntimeException("cn.tedu.ttms.project does not exists");
+            throw new SaveRuntimeException("project does not exists");
         return pro;
     }
 

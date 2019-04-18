@@ -10,7 +10,7 @@
     </select>
 
     <!-- 查询用户列表 -->
-    <select id="findObjects" resultType="map">
+    <select id="findPageObjects" resultType="map">
         select
         id,
         username,

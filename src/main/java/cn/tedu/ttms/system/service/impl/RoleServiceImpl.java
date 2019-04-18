@@ -33,7 +33,7 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public Map<String, Object> findObjects(Role role, PageObject pageObj) {
-        List<Map<String,Object>> list=roleDao.findObjects(role,pageObj);
+        List<Map<String,Object>> list=roleDao.findPageObjects(role,pageObj);
         pageObj.setRowCount(roleDao.getRowCounts(role));
         Map<String,Object> map=new HashMap<String,Object>();
         map.put("list", list);

@@ -10,8 +10,8 @@ import org.junit.Test;
 import cn.tedu.ttms.common.web.PageObject;
 import cn.tedu.ttms.project.dao.ProjectDao;
 import cn.tedu.ttms.project.entity.Project;
-import cn.tedu.ttms.common.BaseDaoTest;
-public class TestProjectDao extends BaseDaoTest {
+import cn.tedu.ttms.common.BaseTest;
+public class TestProjectDao extends BaseTest {
 
 	@Test
 	public void testInsertObject()throws Exception{
@@ -55,7 +55,7 @@ public class TestProjectDao extends BaseDaoTest {
 		new PageObject();
 		Project project=new Project();
 		//总记录数
-		int rowCount=dao.getRowCount(project);
+		int rowCount=dao.getRowCounts(project);
 		//获得总页数(根据总记录数,pageSize计算总页数)
 		pageObject.setRowCount(rowCount);
 		int pageCount=pageObject.getPageCount();
@@ -63,8 +63,7 @@ public class TestProjectDao extends BaseDaoTest {
 		System.out.println("pageCount="+pageCount);
 		//获得当前页的记录(当前页为1)
 
-		List<Project> list=dao.
-		findPageObjects(project,pageObject);
+		List<Map<String,Object>> list=dao.findPageObjects(project,pageObject);
 		System.out.println(list);
 		Assert.assertEquals(2, list.size());
 	}

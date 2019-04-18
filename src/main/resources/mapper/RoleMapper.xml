@@ -7,7 +7,7 @@
 
 
     <!-- 查询角色列表 -->
-    <select id="findObjects" resultType="map">
+    <select id="findPageObjects" resultType="map">
         SELECT  id, name, note  FROM   sys_roles
         <where>
             <if test="entity!=null and entity.name!=null and entity.name!=''">
