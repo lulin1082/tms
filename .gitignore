@@ -1,6 +1,7 @@
 ﻿##ignore this file##
 target
 out
+logs
 .idea/
 .class
 .classpath
