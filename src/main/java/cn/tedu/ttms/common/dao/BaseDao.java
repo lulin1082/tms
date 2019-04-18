@@ -28,8 +28,6 @@ public interface  BaseDao<T> {
 */
 
 	int validById(@Param(value="ids")String[] ids,@Param(value="valid")Integer valid);
-
-
 /*
 	List<Integer> findRelatedIdListById(Integer id);
 */
