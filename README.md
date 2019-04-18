@@ -8,3 +8,5 @@ new push
 0418 table going
 
 0418 update test
+
+0418 asus
