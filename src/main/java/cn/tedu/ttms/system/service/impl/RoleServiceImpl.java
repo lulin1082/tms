@@ -78,21 +78,20 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public Map<String, Object> findRoleById(Long roleId) {
+    public Role findRoleById(Long roleId) {
         if(roleId==null){
             throw new NullPointerException("修改角色信息，角色id不能为空！");
         }
-        Map<String, Object> map = roleDao.findObjectById(roleId);
-        if(map==null || map.size()==0){
+        Role role = roleDao.findObjectById(roleId);
+        if(role == null){
             throw new RuntimeException("修改角色信息查询失败！");
         }
-        List<Integer> menuIdList = roleFunctionDao.findRelatedIdListById(roleId);
-        if(menuIdList==null || menuIdList.size()==0){
+        List<Integer> functionIdList = roleFunctionDao.findRelatedIdListById(roleId);
+        if(functionIdList==null || functionIdList.size()==0){
             throw new RuntimeException("修改角色信息,查询角色权限失败！");
         }
-
-        map.put("menuIdList", menuIdList);
-        return map;
+        role.setFunctionIdList(functionIdList);
+        return role;
     }
 
     @Override

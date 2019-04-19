@@ -16,7 +16,7 @@ import cn.tedu.ttms.common.web.DateJsonTypeConvert;
 public class Project implements Serializable{
 	private static final long serialVersionUID = -5265879262748186874L;
     /**表示项目id对应表中的物理主键*/
-	private Integer id;
+	private Long id;
 	/**项目名称(例如 纽约马拉松)*/
 	private String name;
 	/**项目编码(类似产品的序列号,具备业务特征)*/
@@ -39,10 +39,10 @@ public class Project implements Serializable{
 	private String createdUser;
 	/**项目的修改*/
     private String modifiedUser;
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {

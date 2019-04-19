@@ -58,9 +58,7 @@
     </update>
     
     <!-- 根据id查找某个对象 -->
-    <select id="findObjectById" 
-    parameterType="java.lang.Integer"
-    resultType="map">
+    <select id="findById" parameterType="java.lang.Long" resultType="map">
        select c.*,p.name parentName
        from tms_classes c left join tms_classes p
        on c.parentId=p.id

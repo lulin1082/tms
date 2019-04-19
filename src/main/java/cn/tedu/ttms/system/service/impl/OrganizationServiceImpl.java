@@ -64,6 +64,12 @@ public class OrganizationServiceImpl implements OrganizationService{
     }
 
     @Override
+    public Organization findObjectById(Long id) {
+        Organization organization =organizationDao.findObjectById(id);
+        return organization;
+    }
+
+    @Override
     public void doValidById(String ids,int valid) {
         String[] idArray=ids.split(",");
         int result = organizationDao.doValidById(idArray,valid);
@@ -72,13 +78,15 @@ public class OrganizationServiceImpl implements OrganizationService{
         }
     }
 
+
+
     @Override
-    public Map<String, Object> findById(long id) {
-        Map<String,Object> map= organizationDao.findObjectById(id);
-        if(map == null){
+    public Organization findById(long id) {
+        Organization organization= organizationDao.findObjectById(id);
+        if(organization == null){
             throw new RuntimeException("没有找到相关数据");
         }
-        return map;
+        return organization;
     }
 
 

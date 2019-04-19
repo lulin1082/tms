@@ -1,9 +1,10 @@
 package cn.tedu.ttms.project.service;
+
 import java.util.List;
 import java.util.Map;
-
 import cn.tedu.ttms.common.web.PageObject;
 import cn.tedu.ttms.project.entity.Project;
+
 public interface ProjectService {
   List<Project> findObjects();
   /**返回分页记录
@@ -16,16 +17,15 @@ public interface ProjectService {
    * @param checkedIds
    * @param valid
    */
-  void  validById(String checkedIds,
-		  Integer valid);
+  void  validById(String checkedIds, Integer valid);
   
   void  saveObject(Project project);
-  
   /**根据id查找project对象*/
-  Map<String, Object> findObjectById(Long id);
+  Project findObjectById(Long id);
   /**修改项目信息*/
   void updateObject(Project project);
-  
+
+  public Project findProjectById(Long id);
 }
 
 

@@ -1,18 +1,31 @@
 package cn.tedu.ttms.system.entity;
 
 import java.util.Date;
+import java.util.List;
 
 public class Role {
   private Long id;
   private String name;
+
+
+
   private String note;
   private Date createdtime;
   private Date modifiedtime;
   private String createduser;
   private String modifieduser;
+  private List<Integer> functionIdList;
 
   public Long getId() {
     return id;
+  }
+
+  public List<Integer> getFunctionIdList() {
+    return functionIdList;
+  }
+
+  public void setFunctionIdList(List<Integer> functionIdList) {
+    this.functionIdList = functionIdList;
   }
 
   public void setId(Long id) {

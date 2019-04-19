@@ -21,7 +21,7 @@ public interface RoleService {
 
     void save(Role role, String menuIdList);
 
-    Map<String,Object> findRoleById(Long roleId);
+    Role findRoleById(Long roleId);
 
     void updateRole(Role role, String menuIdList);
 

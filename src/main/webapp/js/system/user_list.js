@@ -34,7 +34,7 @@ function showEditUserPage(){
 		return;
 	}
 	$('#container').data('userId',selectedOption);
-	$('#container').load('user/editUserUI.do');
+	$('#container').load('user/editUI.do');
 }
 
 //获得选中的id，然后拼接成字符串
@@ -42,7 +42,11 @@ function getCheckedId(){
 	var checkedId;
 	$('tbody input[name="checkedItem"]').each(function(){
 		if($(this).is(':checked')){  //或者用prop('checked')
-			checkedId=$(this).val();
+			if(checkedId=='') {
+                checkedId += $(this).val();
+            }else {
+				checkedId += ','+$(this).val();
+			}
 		}
 	})
 	return checkedId;
@@ -57,7 +61,7 @@ function criteriaDoGetObjects(){
 
 //跳转到新增页面
 function showAddUserPage(){
-	var url = 'user/editUserUI.do';
+	var url = 'user/editUI.do';
 	$('#container').load(url);
 }
 

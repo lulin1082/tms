@@ -80,7 +80,7 @@ public class TestProjectDao extends BaseTest {
 	public void testUpdateObject(){
 		ProjectDao dao=(ProjectDao) ctx.getBean("projectDao");
 		//1.根据id找到Project对象
-		 Map<String, Object> project=dao.findObjectById((long)2);
+		 Map<String, Object> project=dao.findById((long)2);
 			//2.修改Project对象内容
 		project.put("name","中国白金游");
 		//pro.setXXXX(....)

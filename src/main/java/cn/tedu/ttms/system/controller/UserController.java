@@ -28,6 +28,12 @@ public class UserController {
     public String listUI(){
         return "system/user_list";
     }
+
+    @RequestMapping("editUI")
+    public String editUser(){
+        return "system/user_edit";
+    }
+
     /**
      * 查询用户列表
      */
@@ -39,13 +45,6 @@ public class UserController {
         return new JsonResult(list);
     }
 
-    /**
-     * 跳转到用户编辑页面（新增/修改）
-     */
-    @RequestMapping("editUI")
-    public String editUser(){
-        return "system/user_edit";
-    }
 
     /**
      * 查询所有角色列表

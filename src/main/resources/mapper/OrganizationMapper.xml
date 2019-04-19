@@ -5,40 +5,42 @@
  -->
 <mapper namespace="cn.tedu.ttms.system.dao.OrganizationDao">
 
+    <select id="findPageObjects" parameterType="cn.tedu.ttms.system.entity.Organization">
+        SELECT * FROM sys_organizations o
+        <where>
+            <if test="entity != null">
+                <if test="entity.name != null and entity.name != '' ">
+                    o.name like CONCAT ("%",#{entity.name},"%")
+                </if>
+                <if test="entity.valid != null">
+                    and o.valid = #{entity.valid}
+                </if>
+            </if>
+        </where>
+        ORDER BY o.createdTime DESC
+        limit #{pageObject.startIndex},#{pageObject.pageSize}
+    </select>
+
     <select id="findOrgObjects" resultType="Map">
-           SELECT o1.id,o1.name,o1.code,o2.name AS `parentName`,o1.valid
+        SELECT o1.id,o1.name,o1.code,o2.name AS `parentName`,o1.valid
         FROM sys_organizations o1,sys_organizations o2
         <where>
             o1.parentId = o2.id
-        <if test="entity != null">
+            <if test="entity != null">
                 <if test="entity.name != null and entity.name != '' ">
                     o1.name like CONCAT ("%",#{entity.name},"%")
                 </if>
                 <if test="entity.valid != null">
                     and o1.valid = #{entity.valid}
                 </if>
-                ORDER BY  o1.name
-        </if></where>
-        limit #{pageObject.startIndex},#{pageObject.pageSize}
-        </select>
-
-        <select id="findPageObjects" parameterType="cn.tedu.ttms.system.entity.Organization">
-            SELECT * FROM sys_organizations organizations
-            <if test="entity != null">
-                <where>
-                      <if test="entity.name != null and entity.name != '' ">
-                          organizations.name like CONCAT ("%",#{entity.name},"%")
-                      </if>
-                    <if test="entity.valid != null">
-                        and organizations.valid = #{entity.valid}
-                    </if>
-                     ORDER BY  organizations.name
-                </where>
+                ORDER BY o1.name
             </if>
-            limit #{pageObject.startIndex},#{pageObject.pageSize}
-        </select>
+        </where>
+        limit #{pageObject.startIndex},#{pageObject.pageSize}
+    </select>
 
-<!--  id name code parentId valid note* -->
+
+    <!--  id name code parentId valid note* -->
 
     <!-- Long id;
       String name;
@@ -61,12 +63,10 @@
                    #{entity.createdTime},
                   #{entity.modifiedTime},
                    #{entity.createdUser},
-                   #{entity.modifiedUser}
-            )
-
+                   #{entity.modifiedUser})
         </insert>
-    
-        <update id="updateObject" parameterType="cn.tedu.ttms.system.entity.Organization">
+
+    <update id="updateObject" parameterType="cn.tedu.ttms.system.entity.Organization">
             UPDATE  sys_organizations SET
             name = #{entity.name} ,
             valid =#{entity.valid},
@@ -82,39 +82,39 @@
            id=#{entity.id};
         </update>
 
-        <select id="getRowCounts" resultType="java.lang.Integer">
-            select count(*) from sys_organizations o
-              <if test="entity != null" >
-                  <where>
-                    <if test="entity.name != null and entity.name != ' ' ">
-                        o.name like CONCAT ("%",#{entity.name},"%")
-                    </if>
-                      <if test="entity.valid !=null">
-                          o.entiy=#{entity.valid}
-                      </if>
-                  </where>
-              </if>
-        </select>
+    <select id="getRowCounts" resultType="java.lang.Integer">
+        select count(*) from sys_organizations o
+        <if test="entity != null">
+            <where>
+                <if test="entity.name != null and entity.name != ' ' ">
+                    o.name like CONCAT ("%",#{entity.name},"%")
+                </if>
+                <if test="entity.valid !=null">
+                    o.entiy=#{entity.valid}
+                </if>
+            </where>
+        </if>
+    </select>
 
-        <select id="getOrgRowsCounts" resultType="java.lang.Integer">
-                   SELECT COUNT(*) from sys_organizations o1,sys_organizations o2 WHERE o1.parentId = o2.id
-                   <where>
-                    <if test="entity != null">
-                        <if test="entity.name !=null and entiy.name != ''">
-                            o1.name=#{entity.name}
-                        </if>
-                    </if>
-                   </where>
-        </select>
+    <select id="getOrgRowsCounts" resultType="java.lang.Integer">
+        SELECT COUNT(*) from sys_organizations o1,sys_organizations o2 WHERE o1.parentId = o2.id
+        <where>
+            <if test="entity != null">
+                <if test="entity.name !=null and entiy.name != ''">
+                    o1.name=#{entity.name}
+                </if>
+            </if>
+        </where>
+    </select>
 
-        <update id="doValidById">
-            UPDATE sys_organizations
-            SET valid = #{valid}
-            WHERE id IN
-            <foreach collection="ids" open="(" close=")" separator="," item="dd">
-                #{dd}
-            </foreach>
-        </update>
+    <update id="doValidById">
+        UPDATE sys_organizations
+        SET valid = #{valid}
+        WHERE id IN
+        <foreach collection="ids" open="(" close=")" separator="," item="dd">
+            #{dd}
+        </foreach>
+    </update>
 
     <!--<update id="validById">
         update tms_projects
@@ -131,8 +131,8 @@
           SELECT  id ,name FROM sys_organizations WHERE valid =1;
     </select>
 
-    <select id="findObjectById" resultType="map">
+    <select id="findObjectById" resultType="cn.tedu.ttms.system.entity.Organization">
         SELECT * FROM sys_organizations WHERE id = #{id};
     </select>
 
-    </mapper>
+</mapper>

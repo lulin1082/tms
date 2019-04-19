@@ -45,12 +45,12 @@ public class FunctionServiceImpl implements FunctionService {
 
         if(functionId==null)
             throw new NullPointerException("id 不能为空");
-        Map<String, Object> function = functionDao.findObjectById(functionId);
+        Map<String, Object> map = functionDao.findById(functionId);
 
-        if(function==null || function.size()==0){
+        if(map==null || map.size()==0){
             throw new RuntimeException("修改菜单信息过程中获取菜单信息失败！");
         }
-        return function;
+        return map;
 
     }
 

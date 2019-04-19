@@ -42,15 +42,16 @@ public class ProjectController {
 
 	@RequestMapping("/findPageObjects")
 	@ResponseBody
-	@RequiresPermissions("product:project:view")
+	/*@RequiresPermissions("product:project:view")*/
 	public JsonResult doFindPageObjects(Project project,PageObject pageObject){//pageCurrent
 		Map<String,Object> map= projectService.findPageObjects(project,pageObject);
 	    return new JsonResult(map);//state=1,message=ok,data=map
 	}
+
 	/**启用禁用*/
 	@RequestMapping("/doValidById")
 	@ResponseBody
-	@RequiresPermissions("product:project:update")
+	/*@RequiresPermissions("product:project:update")*/
 	public JsonResult doValidById(String checkedIds,Integer valid){
 		projectService.validById(checkedIds, valid);
 		return new JsonResult();//state=1,message=ok;
@@ -58,7 +59,7 @@ public class ProjectController {
 	/**保存项目信息*/
 	@RequestMapping("/doSaveProject")
 	@ResponseBody
-	@RequiresPermissions("product:project:save")
+	/*@RequiresPermissions("product:project:save")*/
 	public JsonResult doSaveProject(Project project){
 		projectService.saveObject(project);
 		return new JsonResult();
@@ -66,16 +67,25 @@ public class ProjectController {
 	/**查找项目信息*/
 	@RequestMapping("/doFindById")
 	@ResponseBody
-	@RequiresPermissions("product:project:view")
-	public JsonResult doFindProjectById(
-			Long id){
-	    Map<String, Object> project= projectService.findObjectById(id);
+	/*@RequiresPermissions("product:project:view")*/
+	public JsonResult doFindById(Long id){
+	    Project project= projectService.findObjectById(id);
 		return new JsonResult(project);
 	}
+
+	/**查找项目信息*/
+	@RequestMapping("/doFindId")
+	@ResponseBody
+	/*@RequiresPermissions("product:project:view")*/
+	public JsonResult doFindProjectById(Long id){
+		Project project= projectService.findProjectById(id);
+		return new JsonResult(project);
+	}
+
 	/**修改项目信息*/
 	@RequestMapping("/doUpdateProject")
 	@ResponseBody
-	@RequiresPermissions("product:project:update")
+	/*@RequiresPermissions("product:project:update")*/
 	public JsonResult doUpdateProject(Project project){
 		projectService.updateObject(project);
 		return new JsonResult();//state=1,message="ok"

@@ -85,12 +85,11 @@ public class AttachementServiceImpl implements AttachementService{
 		if(id==null)
 		throw new RuntimeException("id can not be null");
 		//1.根据id查找记录　
-		Map<String, Object> a= attachementDao.findObjectById(id);
-		if(a==null)
+		Attachement attachement= attachementDao.findObjectById(id);
+		if( attachement == null )
 		throw new RuntimeException("数据库中没有对应的记录信息");
 		//2.获得文件的真实路径,构建文件对象关联真实路径
-
-		File file=new File((String) a.get("getFilePath"));
+		File file=new File((String) attachement.getFilePath());
 		//3.检测文件是否存在，存在则下载　
 		if(!file.exists())
 		throw new RuntimeException("文件已经不存在");

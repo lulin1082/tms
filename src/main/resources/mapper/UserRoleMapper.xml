@@ -9,7 +9,6 @@
         select  r.name FROM sys_roles r, sys_user_roles u_r where  u_r.user_id=#{userId} and  u_r.role_id=r.id;
     </select>
 
-
     <!-- int isExist(@Param("roleId")Integer roleId);-->
     <select id="isExist" parameterType="java.lang.Integer" resultType="java.lang.Integer">
         SELECT  COUNT(*) FROM sys_user_roles u_r WHERE role_id=#{roleId};

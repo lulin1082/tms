@@ -9,6 +9,7 @@ import cn.tedu.ttms.project.service.ProjectService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -81,10 +82,25 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public Map<String, Object> findObjectById(Long id) {
+    public Project findObjectById(Long id) {
         if (id == null)
             throw new NullPointerException("id can not be null");
-        Map<String, Object> pro = projectDao.findObjectById(id);
+        Map<String, Object> map=projectDao.findById(id);
+
+        Project project =new Project();
+        project.setId(id);
+        project.setModifiedUser((String)map.get("modifiedUser"));
+        project.setCode((String)map.get("code"));
+        project.setBeginDate((Date)map.get("beginDate"));
+        if (project == null)
+            throw new SaveRuntimeException("project does not exists");
+        return project;
+    }
+
+    public Project findProjectById(Long id) {
+        if (id == null)
+            throw new NullPointerException("id can not be null");
+       Project pro = projectDao.findObjectById(id);
         if (pro == null)
             throw new SaveRuntimeException("project does not exists");
         return pro;
@@ -97,6 +113,8 @@ public class ProjectServiceImpl implements ProjectService {
             //说明在service中写的自定义异常一般都继承RuntimeException
             throw new UpdateRuntimeException("update error");
     }
+
+
 }
 
 

@@ -11,20 +11,20 @@
       select * from tms_projects
   </select>
   <!-- 查询项目信息 -->
-  <select id="findPageObjects" 
-   resultType="cn.tedu.ttms.project.entity.Project">
-      SELECT *
-      FROM tms_projects p
+  <select id="findPageObjects"  resultType="cn.tedu.ttms.project.entity.Project">
+      SELECT * FROM tms_projects p
       <where>
-        <if test="project.name!=null and project.name!=''">
-             p.name like CONCAT ("%",#{project.name},"%")
+            <if test="entity != null">
+        <if test="entity.name!=null and entity.name!=''">
+             p.name like CONCAT ("%",#{entity.name},"%")
         </if>
-        <if test="project.valid!=null">
-            and p.valid=#{project.valid}
+        <if test="entity.valid!=null">
+            and p.valid=#{entity.valid}
         </if>
+            </if>
       </where>
       ORDER BY p.createdTime DESC
-      
+
       limit #{pageObject.startIndex},#{pageObject.pageSize};
   </select>
   <!-- 获得记录总数 -->
@@ -97,10 +97,13 @@
   where id=#{id};
   </update>
  <!-- 根据id查找项目对象 -->
- <select id="findObjectById" parameterType="java.lang.Integer"  resultType="cn.tedu.ttms.project.entity.Project">
+ <select id="findById" parameterType="java.lang.Long"  resultType="map">
     select * from tms_projects where id=#{id}
  </select>
- 
+
+    <select id="findObjectById" parameterType="java.lang.Long"  resultType="cn.tedu.ttms.project.entity.Project">
+        select * from tms_projects where id=#{id}
+    </select>
  <!-- 查询状态是启用的项目的id和名字 ,通常是
             将id和名字显示在页面的select选项中
       <select id="">
@@ -114,14 +117,4 @@
     where valid=1
  </select>
 
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
 </mapper> 

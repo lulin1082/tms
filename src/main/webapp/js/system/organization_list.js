@@ -6,8 +6,7 @@ $(document).ready(function(){
 	doGetObjects();
 });
 
-
-
+//doGetObjects org/findPageObjects.do getQuery
 //获得team记录信息
 function doGetObjects(){
   var url="org/findPageObjects.do";

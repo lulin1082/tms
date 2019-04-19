@@ -17,9 +17,10 @@ import java.util.Map;
 public interface OrganizationService {
     List<Map<String,Object>> findOrgObject(Organization organization, PageObject pageObject);
     List<Map<String,Object>> findPageObject(Organization organization, PageObject pageObject);
-    Map<String,Object> findById(long id);
+    Organization findById(long id);
     void saveObejct(Organization organization);
     void update(Organization organization);
     void doValidById(String ids,int valid);
 
- }
+    Organization findObjectById(Long id);
+}

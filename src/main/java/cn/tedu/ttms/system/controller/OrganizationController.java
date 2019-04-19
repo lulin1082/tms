@@ -6,6 +6,7 @@ import cn.tedu.ttms.system.entity.Organization;
 import cn.tedu.ttms.system.service.OrganizationService;
 import com.github.pagehelper.Page;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
+import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -79,7 +80,7 @@ public class OrganizationController {
 
     @RequestMapping("findById")
     @ResponseBody
-    public JsonResult update(int id){
+    public JsonResult update(Long id){
       /*  	"id":$('#modal-dialog').data('id'),
 		"name":$('#nameId').val(),
 		"code":$('#codeId').val(),
@@ -88,8 +89,8 @@ public class OrganizationController {
 	    "note":$('#noteId').val()
 	 */
 /*   id name code parentId valid note*/
-        Map<String,Object> map=organizationService.findById(id);
-        return new JsonResult(map);
+        Organization organization=organizationService.findObjectById(id);
+        return new JsonResult(organization);
     }
 
     @RequestMapping("doValidById")

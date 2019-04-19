@@ -85,14 +85,8 @@ function loginCheck(){
 	var params = {'username':userName,'userpwd':userPwd,'remeber':remeberMe};
 
 	$.post(url,params,function(result){
-            debugger;
-		if(result.message=="OK"|| result.state==1){   //用户校验成功，跳转到主页面
-            debugger;
-
-
+ 		if(result.message=="OK"|| result.state==1){   //用户校验成功，跳转到主页面
             location.href='indexUI.do';
-
-
 		}else{
 			$('#errorMessage').parent().parent().css('display','block');
 			$('#errorMessage').text(result.message);

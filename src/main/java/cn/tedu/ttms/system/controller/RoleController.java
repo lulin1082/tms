@@ -75,8 +75,8 @@ public class RoleController {
     @RequestMapping("findRoleById")
     @ResponseBody
     public JsonResult findRoleById(Long roleId){
-        Map<String, Object> map = roleService.findRoleById(roleId);
-        return new JsonResult(map);
+        Role role = roleService.findRoleById(roleId);
+        return new JsonResult(role);
     }
 
     /**

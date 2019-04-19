@@ -65,7 +65,7 @@
 
 
     <!--获取所有角色信息-->
-    <select id="findRoleList" >
+    <select id="findRoleList" resultType="map">
           SELECT r.id,r.name FROM sys_roles r;
     </select>
 

@@ -78,7 +78,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Map<String, Object> findUserById(Long userId) {
 
-        Map<String, Object> user=  userDao.findObjectById(userId);
+        Map<String, Object> user=  userDao.findById(userId);
 
         return user;
     }

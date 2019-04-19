@@ -36,7 +36,7 @@ public class ProductTypeServiceImpl implements ProductTypeService{
 	public Map<String,Object> findObjectById(Long id) {
 		if(id==null)
 	    throw new RuntimeException("id can not be null");
-		Map<String,Object> map= productTypeDao.findObjectById(id);
+		Map<String,Object> map= productTypeDao.findById(id);
 		return map;
 	}
 	/**更新产品分类信息*/

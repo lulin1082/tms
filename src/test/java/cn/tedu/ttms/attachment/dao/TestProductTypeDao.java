@@ -43,8 +43,7 @@ public class TestProductTypeDao extends BaseTest {
 		ProductTypeDao typeDao=
 			    (ProductTypeDao)
 			    ctx.getBean("productTypeDao");
-		Map<String,Object> map=
-		typeDao.findObjectById((long)139);//-->json
+		Map<String,Object> map= typeDao.findById((long)139);//-->json
 		//type.setId(139);//139必须是表中存在的id
 		ProductType type=new ProductType();
 		type.setId((Integer)map.get("id"));

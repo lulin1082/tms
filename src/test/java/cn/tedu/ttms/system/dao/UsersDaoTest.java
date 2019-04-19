@@ -31,8 +31,6 @@ public class UsersDaoTest extends BaseTest {
         }
     }
 
-
-
     @Test
     public void testFindNameByName(){
         UsersDao usersDao=ctx.getBean(UsersDao.class);
@@ -45,7 +43,7 @@ public class UsersDaoTest extends BaseTest {
     @Test
     public void testFindNameById(){
         UsersDao usersDao=ctx.getBean(UsersDao.class);
-        User user = usersDao.findById((long)2);
+        User user = usersDao.findObjectById((long)2);
       //  System.out.println(user.toString());
     }
 

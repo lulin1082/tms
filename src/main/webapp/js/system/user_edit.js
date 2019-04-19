@@ -97,18 +97,18 @@ function setBtnVal(){
 	var userId = $('#container').data('userId');
 	if(userId){
 		$('#btn_ok').val('修改');
-		$('#editTitle').text('修改');
+		$('#editTitle').text('修改用户');
 		findUserById(userId);   //根据id查询用户信息
 	}else{
 		$('#btn_ok').val('保存');
-		$('#editTitle').text('新增');
+		$('#editTitle').text('新增用户');
 		//加载所有角色
 		loadRoleList();
 	}
 }
 
 function findUserById(userId){
-	var param  = {'userId':userId};
+	var param  = { "userId":userId };
 	var url = 'user/findUserById.do';
 	$.post(url,param,function(result){
 		if(result.state==SUCCESS){

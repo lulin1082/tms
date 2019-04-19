@@ -1,6 +1,7 @@
 package cn.tedu.ttms.common.dao;
 
 import cn.tedu.ttms.common.web.PageObject;
+import cn.tedu.ttms.project.entity.Project;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +32,8 @@ public interface  BaseDao<T> {
 	List<Integer> findRelatedIdListById(Long id);
 
 	List<Map<String,Object>> findPageObjects(@Param(value="entity") T entity, @Param(value="pageObject") PageObject pageObject);
- 	Map<String,Object> findObjectById(@Param(value = "id") Long id);
 
-	T findById(@Param(value = "id") Long id);
+	Map<String,Object> findById(@Param(value = "id") Long id);
+
+	T findObjectById(@Param(value = "id") Long id);
 }

@@ -17,50 +17,15 @@ import java.util.Map;
 
 @Repository
 public interface ProjectDao extends BaseDao<Project> {
-    /**
-     * @param entity 代表是一个project对象
-     * @return 表示insert记录的行数
-     */
-    //public int insertObject(Project entity);
 
     /**
-     * 查询项目信息
+      * @return 表示insert记录的行数
      */
     public List<Project> findObjects();
 
-    /**
-     * 分页查询项目信息
-     */
-   /* public List<Project>
-    findPageObjects(@Param("project") Project project, @Param("pageObject") PageObject pageObject);*/
-
-    /**
-     * 获得表中的记录数
-     */
-    //public int getRowCount(Project project);
-
-    /**
-     * 禁用启用记录数
-     *
-     * @return 表示更新的行数, 假如返回值为-1表示
-     * 更新失败
-     */
     public int validById(@Param("ids") String[] ids, @Param("valid") Integer valid);
 
-    /**
-     * 根据id查找project对象
-     */
-
-
-
-
-    /**根据id修改project对象*/
-    //int updateObject(Project cn.tedu.ttms.project);
-
-    /**
-     * 查询项目的id和名字
-     */
-    List<Map<String, Object>> findIdAndNames();
+    public List<Map<String, Object>> findIdAndNames();
 
 }
 
