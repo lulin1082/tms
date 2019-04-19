@@ -58,7 +58,7 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-5 control-label"></div>
-					<input type="button" id="btn_save" class="btn btn-primary">
+					<input type="button" id="btn_save" value="确定" class="btn btn-primary">
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<input type="button" id="btn_return" value="返回" class="btn btn-warning">
 				</div>

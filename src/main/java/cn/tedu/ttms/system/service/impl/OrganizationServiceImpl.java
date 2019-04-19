@@ -72,8 +72,6 @@ public class OrganizationServiceImpl implements OrganizationService{
         }
     }
 
-
-
     @Override
     public Map<String, Object> findById(long id) {
         Map<String,Object> map= organizationDao.findObjectById(id);

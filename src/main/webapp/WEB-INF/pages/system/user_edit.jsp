@@ -43,7 +43,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-sm-2 control-label"><font color="red">*</font>手机号：</div>
+					<div class="col-sm-2 control-label"><p color="red" >*</p>手机号：</div>
 					<div class="col-sm-10">
 						<input type="text" name="mobile" id="mobile" placeholder="手机号" class="form-control dynamicClear required">
 					</div>
@@ -56,7 +56,7 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-2 control-label"></div>
-					<input type="button" class="btn btn-primary" id="btn_ok">
+					<input type="button" value="提交" class="btn btn-primary" id="btn_ok">
 					&nbsp;&nbsp;
 					<input type="button" value="返回" class="btn btn-warning" id="btn_return">
 				</div>
