@@ -1,10 +1,7 @@
 package cn.tedu.ttms.common.dao;
 
 import cn.tedu.ttms.common.web.PageObject;
-import cn.tedu.ttms.system.entity.User;
 import org.apache.ibatis.annotations.Param;
-
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 import java.util.Map;
 

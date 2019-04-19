@@ -65,7 +65,8 @@ public class OrganizationServiceImpl implements OrganizationService{
 
     @Override
     public void doValidById(String ids,int valid) {
-        int result = organizationDao.doValidById(ids,valid);
+        String[] idArray=ids.split(",");
+        int result = organizationDao.doValidById(idArray,valid);
         if(result==-1){
             throw new RuntimeException("更新不成功");
         }

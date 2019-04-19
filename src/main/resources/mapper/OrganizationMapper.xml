@@ -127,8 +127,6 @@
         </foreach>
     </update>-->
 
-
-
     <select id="findIdAndNames" resultType="map">
           SELECT  id ,name FROM sys_organizations WHERE valid =1;
     </select>
