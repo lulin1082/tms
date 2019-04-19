@@ -40,17 +40,46 @@
 
 <!--  id name code parentId valid note* -->
 
-
+    <!-- Long id;
+      String name;
+       String code;
+     parentId;
+     parentIds;
+    valid;
+    note;
+   createdtime;
+    modifiedtime;
+   createduser;
+      modifieduser;-->
     <insert id="insertObject" parameterType="cn.tedu.ttms.system.entity.Organization">
-            INSERT  INTO sys_organizations (name,valid)VALUES (
-                  entity.name,entity.valid
+            INSERT  INTO sys_organizations (name,valid,code,parentId,parentIds,createdTime,modifiedTime,createdUser,modifiedUser)VALUES (
+                  #{entity.name},
+                   #{entity.valid},
+                   #{entity.code},
+                   #{entity.parentId},
+                   #{entity.parentIds},
+                   #{entity.createdTime},
+                  #{entity.modifiedTime},
+                   #{entity.createdUser},
+                   #{entity.modifiedUser}
             )
+
         </insert>
     
-        <update id="updateObjec" parameterType="cn.tedu.ttms.system.entity.Organization">
+        <update id="updateObject" parameterType="cn.tedu.ttms.system.entity.Organization">
             UPDATE  sys_organizations SET
             name = #{entity.name} ,
-            valid =#{entity.valid}
+            valid =#{entity.valid},
+           code=#{entity.code},
+           parentId=#{entity.parentId},
+           parentIds=#{entity.parentIds},
+           valid=#{entity.valid},
+           createdTime=#{entity.createdTime},
+           modifiedTime=#{entity.modifiedTime},
+           createdUser=#{entity.createdUser},
+           modifiedUser=#{entity.modifiedUser}
+           WHERE
+           id=#{entity.id};
         </update>
 
         <select id="getRowCounts" resultType="java.lang.Integer">
@@ -79,10 +108,11 @@
         </select>
 
         <update id="doValidById">
-            UPDATE sys_organizations SET valid = #{valid}
+            UPDATE sys_organizations
+            SET valid = #{valid}
             WHERE id IN
-            <foreach collection="ids" open="(" close=")" separator="," item="id">
-                #{ids}
+            <foreach collection="ids" open="(" close=")" separator="," item="dd">
+                #{dd}
             </foreach>
         </update>
 
@@ -103,7 +133,7 @@
           SELECT  id ,name FROM sys_organizations WHERE valid =1;
     </select>
 
-    <select id="findObjectById" resultType="cn.tedu.ttms.system.entity.Organization">
+    <select id="findObjectById" resultType="map">
         SELECT * FROM sys_organizations WHERE id = #{id};
     </select>
 

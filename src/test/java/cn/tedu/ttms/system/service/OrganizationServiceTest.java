@@ -3,9 +3,10 @@ package cn.tedu.ttms.system.service;
 import cn.tedu.ttms.system.entity.Organization;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.BlockJUnit4ClassRunner;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import org.springframework.transaction.jta.SpringJtaSynchronizationAdapter;
 
 import javax.annotation.Resource;
 
@@ -19,41 +20,42 @@ import static org.junit.Assert.*;
  * @Date: 4/17/2019 12:52 AM
  * @Version 1.0
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-/** 注入相关的配置文件：可以写入多个配置文件 **/
+/*@RunWith(BlockJUnit4ClassRunner)
+
+*//** 注入相关的配置文件：可以写入多个配置文件 **//*
 @ContextConfiguration(locations={"classpath:spring--mvc.xml",
         "classpath:spring--shiro.xml"
-})
+})*/
 
 public class OrganizationServiceTest {
 
 
-    @Autowired
+   /* @Autowired
     OrganizationService organizationService;
 
     @Test
-    public void findOrgObject() throws Exception {
+    public void findOrgObject()  {
         organizationService.findOrgObject(null,null);
     }
 
     @Test
-    public void findPageObject() throws Exception {
+    public void findPageObject()   {
         organizationService.findOrgObject(null,null);
     }
 
     @Test
-    public void findById() throws Exception {
+    public void findById()   {
         organizationService.findById((long)3);
     }
 
     @Test
-    public void saveObejct() throws Exception {
+    public void saveObejct()  {
         Organization organization = null;
         organizationService.saveObejct(organization);
     }
 
     @Test
-    public void update() throws Exception {
+    public void update() throws   {
         Organization organization = new Organization();
         Map map=organizationService.findById((long)3);
        long id=(Long)map.get("id");
@@ -67,6 +69,6 @@ public class OrganizationServiceTest {
     public void doValidById() throws Exception {
         String ids="1,2,3,4,5,6,7";
         organizationService.doValidById(ids,1);
-    }
+    }*/
 
 }
