@@ -15,7 +15,7 @@ import java.util.Map;
 
 @Service
 public interface OrganizationService {
-    List<Map<String,Object>> findOrgObject(Organization organization, PageObject pageObject);
+    Map<String,Object>  findOrgObject(Organization organization, PageObject pageObject);
     List<Map<String,Object>> findPageObject(Organization organization, PageObject pageObject);
     Organization findById(long id);
     void saveObejct(Organization organization);

@@ -59,9 +59,11 @@ public class SaltMd5Task implements Runnable {
 
     @Override
     public void run() {
-        ByteSource salt = ByteSource.Util.bytes(this.getSalt());
-        Md5Hash md5Hash = new Md5Hash(this.getPassword(), "salt");
-        this.result= md5Hash.toString();
+        synchronized (lockObj) {
+            ByteSource salt = ByteSource.Util.bytes(this.getSalt());
+            Md5Hash md5Hash = new Md5Hash(this.getPassword(), "salt");
+            this.result = md5Hash.toString();
+        }
     }
 }
 

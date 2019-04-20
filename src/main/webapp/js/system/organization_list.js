@@ -9,16 +9,17 @@ $(document).ready(function(){
 //doGetObjects org/findPageObjects.do getQuery
 //获得team记录信息
 function doGetObjects(){
-  var url="org/findPageObjects.do";
+	debugger;
+  var url="org/findOrgObjects.do";
   var params=getQueryParamValues();
   var parentId=$("#modal-dialog").data("parentId");
   console.log("queryFormId.parentId="+parentId);
   if(parentId)
   {
-  	//params.parentId=parentId;
+  	params.parentId=parentId;
   }
-  var currentPage=$("#pagination").data('pageCurrent');
-  if(currentPage)params.pageCurrent=currentPage;
+  var currentPage=$("#pageId").data('pageCurrent');
+  if(currentPage){params.pageCurrent=currentPage}
   $.post(url,params,function(result){
 	   if(result.state==1){
 		   setTableRows(result.data.list);
@@ -36,8 +37,8 @@ function doGetChildObjects(){
 }
 //获取查询参数
 function getQueryParamValues(){
-	var name = $('#searchNameId').val();
-	var params = {'name':name}
+	var searchNam  = $('#searchNameId').val();
+	var params = {"name":searchNam}
 	return params;
 }
 //初始化列表页面
@@ -47,7 +48,7 @@ function setTableRows(list){
 	var tds='<td><input type="checkbox" class="checkbox" name="checkedItem" value="[id]"></td>'+
 	        '<td><a class="childOrgs">[name]</a></td>'+
 	        '<td>[code]</td>'+
-	        '<td>[parentId]</td>'+
+	        '<td>[parentName]</td>'+
 	        '<td>[valid]</td>'+
 	        '<td><a class="btn btn-default btn-update doShowEditDialog">修改</a></td>';
 	for(var i in list){
@@ -56,7 +57,7 @@ function setTableRows(list){
 	    tr.append(tds.replace('[id]',list[i].id)
 	    		  .replace('[name]',list[i].name)
 	    		  .replace('[code]',list[i].code)
-	    		  .replace('[parentId]',list[i].parentId!=0?list[i].parentId:'无')
+	    		  .replace('[parentName]',list[i].parentName!=0?list[i].parentName:'无')
 	    		  .replace('[valid]',list[i].valid?'启用':'禁用'));
 	    
 	    tBody.append(tr);

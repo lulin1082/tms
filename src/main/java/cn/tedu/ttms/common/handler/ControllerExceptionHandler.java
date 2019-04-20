@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 @ControllerAdvice
 public class ControllerExceptionHandler {
 
-    private final static Logger logger = LoggerFactory.getLogger(ControllerExceptionHandler.class);
+  //  private final static Logger logger = LoggerFactory.getLogger(ControllerExceptionHandler.class);
 
     @ExceptionHandler(Exception.class)
     @ResponseBody
@@ -27,13 +27,11 @@ public class ControllerExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     @ResponseBody
     public JsonResult handleException(RuntimeException e){
-
         if(e instanceof AutoException){
             AutoException autoException=(AutoException) e;
             return new JsonResult(autoException.getCode(),e);
 //            return new ResultBean(e):
         }
-
         return new JsonResult(e);
     }
 

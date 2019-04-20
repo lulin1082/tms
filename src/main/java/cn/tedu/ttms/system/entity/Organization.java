@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Organization {
 
+
   private Long id;
   private String name;
   // 机构编码
@@ -15,10 +16,10 @@ public class Organization {
   // 有效标志
   private Long valid;
   private String note;
-  private Date createdtime;
-  private Date modifiedtime;
-  private String createduser;
-  private String modifieduser;
+  private Date createdTime;
+  private Date modifiedTime;
+  private String createdUser;
+  private String modifiedUser;
 
   public Long getId() {
     return id;
@@ -76,20 +77,20 @@ public class Organization {
     this.note = note;
   }
 
-  public Date getCreatedtime() {
-    return createdtime;
+  public Date getCreatedTime() {
+    return createdTime;
   }
 
-  public void setCreatedtime(Date createdtime) {
-    this.createdtime = createdtime;
+  public void setCreatedTime(Date createdTime) {
+    this.createdTime = createdTime;
   }
 
-  public Date getModifiedtime() {
-    return modifiedtime;
+  public Date getModifiedTime() {
+    return modifiedTime;
   }
 
-  public void setModifiedtime(Date modifiedtime) {
-    this.modifiedtime = modifiedtime;
+  public void setModifiedTime(Date modifiedTime) {
+    this.modifiedTime = modifiedTime;
   }
 
   @Override
@@ -102,26 +103,26 @@ public class Organization {
             ", parentIds=" + parentIds +
             ", valid=" + valid +
             ", note='" + note + '\'' +
-            ", createdtime=" + createdtime +
-            ", modifiedtime=" + modifiedtime +
-            ", createduser='" + createduser + '\'' +
-            ", modifieduser='" + modifieduser + '\'' +
+            ", createdTime=" + createdTime +
+            ", modifiedTime=" + modifiedTime +
+            ", createdUser='" + createdUser + '\'' +
+            ", modifiedUser='" + modifiedUser + '\'' +
             '}';
   }
 
-  public String getCreateduser() {
-    return createduser;
+  public String getCreatedUser() {
+    return createdUser;
   }
 
-  public void setCreateduser(String createduser) {
-    this.createduser = createduser;
+  public void setCreatedUser(String createdUser) {
+    this.createdUser = createdUser;
   }
 
-  public String getModifieduser() {
-    return modifieduser;
+  public String getModifiedUser() {
+    return modifiedUser;
   }
 
-  public void setModifieduser(String modifieduser) {
-    this.modifieduser = modifieduser;
+  public void setModifiedUser(String modifiedUser) {
+    this.modifiedUser = modifiedUser;
   }
 }

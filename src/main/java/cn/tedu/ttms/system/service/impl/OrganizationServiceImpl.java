@@ -6,6 +6,7 @@ import cn.tedu.ttms.system.entity.Organization;
 import cn.tedu.ttms.system.service.OrganizationService;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -21,18 +22,18 @@ public class OrganizationServiceImpl implements OrganizationService{
     OrganizationDao organizationDao;
 
     @Override
-    public List<Map<String, Object>> findOrgObject(Organization organization, PageObject pageObject) {
-        int rows=organizationDao.getOrgRowsCounts(organization);
-        if(pageObject!=null) {
-            pageObject.setRowCount(rows);
-        }else{
-            pageObject = new PageObject();
-        }
+    public Map<String,Object>  findOrgObject(Organization organization, PageObject pageObject) {
         List<Map<String, Object>> list = organizationDao.findOrgObjects(organization,pageObject);
+        int rows=organizationDao.getOrgRowsCounts(organization);
+        //不管nulll exist 都要填充
+        pageObject.setRowCount(rows);
+        Map<String,Object> map=new HashMap<>();
+        map.put("list",list);
+        map.put("pageObject",pageObject);
         if(list==null){
             throw new RuntimeException("没有找到数据");
         }
-        return list;
+        return map;
     }
 
     @Override

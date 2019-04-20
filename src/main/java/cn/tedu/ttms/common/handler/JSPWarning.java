@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletRequest;
 public class JSPWarning {
 
 
+/*
     @ExceptionHandler
-    public String handle(Exception e,
-                         HttpServletRequest request){
+*/
+    public String handle(Exception e, HttpServletRequest request){
         System.out.println("handle()");
         if(e instanceof ApplicationException){
-            request.setAttribute("login_failed",
-                    e.getMessage());
+            request.setAttribute("login_failed", e.getMessage());
             return "login";
         }
         return "error";

@@ -25,7 +25,11 @@
 					<li><input type="text" id="searchNameId" class="form-control"placeholder="机构名称"></li>
 					<li><select id="selectProjectId" class="form-control">
 							<option value="">选择项目</option>
-					</select></li>
+                        <option value="aid">东南</option>
+                        <option value="bid">东北 </option>
+                        <option value="cid">西南</option>
+                        <option value="did">西北</option>
+                    </select></li>
 					<li class='O1'><button type="button" class="btn btn-primary btn-search" >查询</button></li>
 					<li class='O2'><button type="button" class="btn btn-primary btn-add">添加</button></li>
 					<li class='O3'><button type="button" class="btn btn-primary btn-invalid">禁用</button></li>

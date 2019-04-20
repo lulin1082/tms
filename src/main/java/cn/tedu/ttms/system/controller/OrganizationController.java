@@ -28,44 +28,44 @@ import java.util.Map;
 public class OrganizationController {
 
 
-   @Resource
+    @Resource
     OrganizationService organizationService;
 
     @RequestMapping("/editUI")
-    public String editUI(){
+    public String editUI() {
         return "system/organization_edit";
     }
 
     @RequestMapping("/listUI")
-    public String listUI(){
-        return  "system/organization_list";
+    public String listUI() {
+        return "system/organization_list";
     }
 
     @RequestMapping("/findPageObjects")
     @ResponseBody
-    public JsonResult findObject(Organization organization, PageObject pageObject){
-        List<Map<String, Object>> list = organizationService.findPageObject(organization,pageObject);
+    public JsonResult findObject(Organization organization, PageObject pageObject) {
+        List<Map<String, Object>> list = organizationService.findPageObject(organization, pageObject);
         return new JsonResult(list);
     }
 
-    @RequestMapping("/findOrgObejcts")
+    @RequestMapping("/findOrgObjects")
     @ResponseBody
-    public JsonResult findObect( Organization organization, PageObject pageObject  ){
-        List<Map<String, Object>> list= organizationService.findOrgObject( organization,  pageObject );
-        return new JsonResult(list);
+    public JsonResult findObect(Organization organization, PageObject pageObject) {
+        Map<String,Object>  map = organizationService.findOrgObject(organization, pageObject);
+        return new JsonResult(map);
     }
 
 
     @RequestMapping("save")
     @ResponseBody
-    public JsonResult save(Organization organization){
+    public JsonResult save(Organization organization) {
         organizationService.saveObejct(organization);
         return new JsonResult();
     }
 
     @RequestMapping("update")
     @ResponseBody
-    public JsonResult update(Organization organization){
+    public JsonResult update(Organization organization) {
       /*  	"id":$('#modal-dialog').data('id'),
 		"name":$('#nameId').val(),
 		"code":$('#codeId').val(),
@@ -73,14 +73,14 @@ public class OrganizationController {
 	    "valid":$('input[name="valid"]:checked').val(),
 	    "note":$('#noteId').val()
 	 */
-/*   id name code parentId valid note*/
+        /*   id name code parentId valid note*/
         organizationService.update(organization);
         return new JsonResult();
     }
 
     @RequestMapping("findById")
     @ResponseBody
-    public JsonResult update(Long id){
+    public JsonResult update(Long id) {
       /*  	"id":$('#modal-dialog').data('id'),
 		"name":$('#nameId').val(),
 		"code":$('#codeId').val(),
@@ -88,15 +88,15 @@ public class OrganizationController {
 	    "valid":$('input[name="valid"]:checked').val(),
 	    "note":$('#noteId').val()
 	 */
-/*   id name code parentId valid note*/
-        Organization organization=organizationService.findObjectById(id);
+        /*   id name code parentId valid note*/
+        Organization organization = organizationService.findObjectById(id);
         return new JsonResult(organization);
     }
 
     @RequestMapping("doValidById")
     @ResponseBody
-    public  JsonResult doValidById(String ids,int valid){
-        organizationService.doValidById(ids,valid);
+    public JsonResult doValidById(String ids, int valid) {
+        organizationService.doValidById(ids, valid);
         return new JsonResult();
     }
 
