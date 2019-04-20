@@ -23,4 +23,6 @@ public interface OrganizationService {
     void doValidById(String ids,int valid);
 
     Organization findObjectById(Long id);
+
+    Map<String,Object> findIdAndName();
 }

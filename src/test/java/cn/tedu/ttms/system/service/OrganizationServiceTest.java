@@ -1,5 +1,6 @@
 package cn.tedu.ttms.system.service;
 
+import cn.tedu.ttms.common.BaseTest;
 import cn.tedu.ttms.system.entity.Organization;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,10 +29,13 @@ import static org.junit.Assert.*;
         "classpath:spring--shiro.xml"
 })*/
 
-public class OrganizationServiceTest {
+public class OrganizationServiceTest extends BaseTest{
+
+    OrganizationService organizationService;
 
 
-   /* @Autowired
+
+    /* @Autowired
     OrganizationService organizationService;
 
     @Test

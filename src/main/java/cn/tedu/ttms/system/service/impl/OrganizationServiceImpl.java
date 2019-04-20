@@ -71,6 +71,12 @@ public class OrganizationServiceImpl implements OrganizationService{
     }
 
     @Override
+    public Map<String,Object> findIdAndName() {
+       Map<String,Object> map= organizationDao.findIdAndNames();
+       return map;
+    }
+
+    @Override
     public void doValidById(String ids,int valid) {
         String[] idArray=ids.split(",");
         int result = organizationDao.doValidById(idArray,valid);
