@@ -15,8 +15,8 @@
         u.id,
         u.username,
         u.email   ,
-        mobile,
-        valid
+        u.mobile,
+        u.valid
         from
         sys_users u
         <where>
