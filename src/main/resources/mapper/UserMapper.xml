@@ -12,22 +12,22 @@
     <!-- 查询用户列表 -->
     <select id="findPageObjects" resultType="map">
         select
-        id,
-        username,
-        email,
+        u.id,
+        u.username,
+        u.email   ,
         mobile,
         valid
         from
-        sys_users
+        sys_users u
         <where>
             <if test="entity!=null and entity.username!=null and entity.username!=''">
-                username LIKE CONCAT('%',#{entity.username},'%')
+                 u.username   LIKE CONCAT('%',#{entity.username},'%')
             </if>
             <if test="entity!=null and entity.email!=null and entity.email!=''">
-                email LIKE CONCAT('%',#{entity.email},'%')
+                u.email LIKE CONCAT('%',#{entity.email},'%')
             </if>
             <if test="entity!=null and entity.mobile!=null and entity.mobile!=''">
-                mobile LIKE CONCAT('%',#{entity.mobile},'%')
+                u.mobile LIKE CONCAT('%',#{entity.mobile},'%')
             </if>
         </where>
         <if test="pageObject!=null and pageObject.pageSize != 0">
