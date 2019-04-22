@@ -8,20 +8,21 @@
 
 
     <select id="findOrgObjects" resultType="map">
-        <bind name="ENTITYNAME" value="'%' +entity.name + '%'" />
+        <!--<bind name="ENTITYNAME" value="'%' +entity.name + '%'" />-->
         SELECT o1.id,o1.name AS `name`,o1.code,o2.name AS `parentName`,o1.valid
         FROM sys_organizations o1,sys_organizations o2
         WHERE o1.parentId = o2.id
         <if test=" entity !=null  and entity.name != null and entity.name != '' ">
-            AND  o1.name LIKE  #{ENTITYNAME}
+            AND  o1.name like CONCAT ("%",#{entity.name},"%")
         </if>
         <if test=" entity !=null  and entity.valid != null">
            AND o1.valid = #{entity.valid}
         </if>
         ORDER BY o1.name
-        limit #{pageObject.startIndex},#{pageObject.pageSize}
+        <if test="pageObject != null">
+         limit #{pageObject.startIndex},#{pageObject.pageSize}
+        </if>
     </select>
-
 
     <select id="findPageObjects" resultType="cn.tedu.ttms.system.entity.Organization">
         SELECT * FROM sys_organizations o
@@ -86,7 +87,7 @@
         select count(*) from sys_organizations o
         <if test="entity != null">
             <where>
-                <if test="entity.name != null and entity.name != ' ' ">
+                <if test="entity.name != null and entity.name != '' ">
                     o.name like CONCAT ("%",#{entity.name},"%")
                 </if>
                 <if test="entity.valid !=null">
@@ -97,9 +98,9 @@
     </select>
 
     <select id="getOrgRowsCounts" resultType="java.lang.Integer">
-        SELECT COUNT(*) from sys_organizations o1,sys_organizations o2 WHERE o1.parentId = o2.id
+        SELECT COUNT(*) from sys_organizations oll,sys_organizations o2 WHERE oll.parentId = o2.id
                 <if test=" entity!=null and entity.name !=null and entity.name != '' ">
-                   AND o1.name like CONCAT ("%",#{entity.name},"%")
+                   AND oll.name like CONCAT ("%",#{entity.name},"%")
                 </if>
     </select>
 

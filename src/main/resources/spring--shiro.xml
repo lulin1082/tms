@@ -8,9 +8,6 @@
     <import resource="spring-mybatis.xml"/>
     <import resource="spring-redis.xml"/>
     <import resource="spring-cache.xml"/>
-<!--
-    <import resource="spring&#45;&#45;mvc.xml"/>
--->
     <context:component-scan base-package="cn.tedu.ttms"/>
 
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">

@@ -4,20 +4,16 @@ $(document).ready(function(){
 	$("#queryFormId").on('click','.btn-valid,.btn-invalid',doValidById);	
 	$('#queryFormId').on('click','.childOrgs',doGetChildObjects);
 	doGetInitObjects();
-
 });
 
 
 
 function doGetInitObjects(){
 	doGetObjects();
-	doGetSelectData();
+    doFillSelectData();
 }
 
 function doFillSelectData(){
-
-
-
 	var url="org/findOrgIdAndNames.do";
 	$.getJSON(url,function (result) {
 			if(result.state==1){
@@ -41,7 +37,7 @@ function doFillSelectData(){
 	selectObj.append('<option value="">选择项目</option>')
 	var optionObj ="<option value=[id]>[name]</option>"
 	for(var i in list){
-		selectObj.append(optionObj.replace("[id]",list[i].id).replace("[name]"),list[name]);
+		selectObj.append(optionObj.replace("[id]",list[i].id).replace("[name]",list[name]));
 	}
  }
 

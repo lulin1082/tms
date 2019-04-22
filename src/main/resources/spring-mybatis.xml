@@ -5,11 +5,9 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        " >
+	<import resource="spring-pool.xml"/>
 
-
-   <import resource="spring-pool.xml"/>
-
-  <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 	   <property name="dataSource" ref="ds"></property>
 	   <property name="configLocation" value="classpath:mybatis-config.xml"></property>
 	   <!-- 自动扫描mapping.xml文件 -->
@@ -23,6 +21,5 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="cn.tedu.ttms.**.dao "/>
 	</bean>
-
 
 </beans>
