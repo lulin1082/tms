@@ -48,6 +48,8 @@ public class OrganizationController {
         return new JsonResult(list);
     }
 
+
+
     @RequestMapping("/findOrgObjects")
     @ResponseBody
     public JsonResult findObect(Organization organization, PageObject pageObject) {
@@ -100,6 +102,13 @@ public class OrganizationController {
         return new JsonResult();
     }
 
+
+    @RequestMapping("findOrgIdAndNames")
+    @ResponseBody
+    public  JsonResult findOrgIdAndName(){
+        List<Map<String,Object>> map=organizationService.findIdAndName();
+        return new JsonResult(map);
+    }
  /* findObjects
     update
             findById

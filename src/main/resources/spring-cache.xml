@@ -6,11 +6,8 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/cache
        http://www.springframework.org/schema/cache/spring-cache.xsd">
-	
 
-    
    <cache:annotation-driven cache-manager="cacheManager22"/>
-
     <bean id="cacheManager22" class="org.springframework.cache.support.SimpleCacheManager">
         <property name="caches">
             <set>

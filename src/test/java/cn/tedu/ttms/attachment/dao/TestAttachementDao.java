@@ -4,6 +4,9 @@ import cn.tedu.ttms.common.BaseTest;
 
 public class TestAttachementDao extends BaseTest {
 
+	static public final String DEFAULT_CONFIGURATION_FILE = "log4jproperties";
+	static final String DEFAULT_XML_CONFIGURATION_FILE ="log4j.xml";
+
 	public void testInsertObject(){
 	//	AttachementDao dao=(AttachementDao) ctx.getBean("attachementDao");
 //		AttachementDao dao=ctx.getBean(AttachementDao.class);

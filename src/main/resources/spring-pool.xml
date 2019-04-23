@@ -5,8 +5,7 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd ">
 
-   <!-- 加载jdbc.properties文件(一般加载多个文件时
-        可考虑使用此方式) -->
+   <!-- 加载jdbc.properties文件(一般加载多个文件时可考虑使用此方式) -->
    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
@@ -14,18 +13,9 @@
 			</list>
 		</property>
    </bean>
-
 	<!--<util:properties id="propertiesReader" location="classpath:jdbc.properties"/>-->
-
-
-
-
-
-   <!-- 配置DRUID连接池(这个连接池的说明:
-   http://github.com 在搜索栏输入druid查找)
-   -->
-   <bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter"
-    lazy-init="true">
+   <!-- 配置DRUID连接池(这个连接池的说明:http://github.com 在搜索栏输入druid查找)-->
+   <bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter" lazy-init="true">
         <description>状态过滤器</description>
          <!-- 通过slowSqlMillis用来配置SQL慢的标准 -->
         <property name="slowSqlMillis" value="3000" />

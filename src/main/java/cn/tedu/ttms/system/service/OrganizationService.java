@@ -21,6 +21,6 @@ public interface OrganizationService {
     void saveObejct(Organization organization);
     void update(Organization organization);
     void doValidById(String ids,int valid);
-
     Organization findObjectById(Long id);
+    List<Map<String,Object>> findIdAndName();
 }

@@ -24,11 +24,6 @@ public class JedisUtil {
     @Autowired
     private JedisPool jedisPool;
 
-
-    public void setJedisPool(JedisPool jedisPool) {
-        this.jedisPool = jedisPool;
-    }
-
     private Jedis getResource(){
         return jedisPool.getResource();
     }
@@ -43,10 +38,10 @@ public class JedisUtil {
         }
     }
 
-    public void expire(byte[] key,int i) {
+    public void expire(byte[] key,int expireTime) {
         Jedis jedis=getResource();
         try {
-             jedis.expire(key, i);
+             jedis.expire(key, expireTime);
         }finally {
             jedis.close();
         }
@@ -56,8 +51,7 @@ public class JedisUtil {
     public byte[] get(byte[] key) {
         Jedis jedis=getResource();
         try{
-           byte[] value= jedis.get(key);
-            return value;
+           return  jedis.get(key);
         }finally {
             jedis.close();
         }

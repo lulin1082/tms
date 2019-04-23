@@ -71,6 +71,15 @@ public class OrganizationServiceImpl implements OrganizationService{
     }
 
     @Override
+    public List<Map<String,Object>> findIdAndName() {
+       List<Map<String,Object>> list= organizationDao.findIdAndNames();
+       if(list==null){
+            throw  new RuntimeException("没有找到相关的Organization Id和Name");
+        }
+       return list;
+    }
+
+    @Override
     public void doValidById(String ids,int valid) {
         String[] idArray=ids.split(",");
         int result = organizationDao.doValidById(idArray,valid);
