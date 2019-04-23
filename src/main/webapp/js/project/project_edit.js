@@ -29,7 +29,7 @@ function doFillFormData(obj){
 	console.log("doFillFormData");
 	$("#nameId").val(obj.name);
 	$("#codeId").val(obj.code);
-	$("#beginDateId").val(obj.beginDate);//2017/08/09 
+	$("#beginDateId").val(obj.beginDate);//2017/08/09
 	$("#endDateId").val(obj.endDate);
     $("#noteId").html(obj.note);
     //启用禁用
