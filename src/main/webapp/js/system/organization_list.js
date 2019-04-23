@@ -1,14 +1,18 @@
 $(document).ready(function(){
+	debugger;
 	$("#queryFormId").on('click','.btn-add,.btn-update',doShowEditDialog);
 	$("#queryFormId").on('click','.btn-search',doGetObjects);
 	$("#queryFormId").on('click','.btn-valid,.btn-invalid',doValidById);	
 	$('#queryFormId').on('click','.childOrgs',doGetChildObjects);
+    /*$('selectProjectId').on("change",'select#status',function() {
+        console.log($(this).val());
+        $('#searchNameId').val=$(this).val();
+    }*/
 	doGetInitObjects();
 });
 
-
-
 function doGetInitObjects(){
+	debugger;searchNameId
 	doGetObjects();
     doFillSelectData();
 }
@@ -17,6 +21,7 @@ function doFillSelectData(){
 	var url="org/findOrgIdAndNames.do";
 	$.getJSON(url,function (result) {
 			if(result.state==1){
+				debugger;
                 setOrganizationSelectOptions(result.data);
 			}else{
 				alert(result.message)
@@ -24,21 +29,25 @@ function doFillSelectData(){
     })
  }
 
-
-
  function setOrganizationSelectOptions(list){
-	/*var select=$();
-	select.empty();
-	for(var i in list){
-		select.append("<option value='"+list.id+"'> "+list.name+"</option>")
-	 }*/
+	debugger;
+	console.log("strt")
 	var selectObj = $('#selectProjectId');
 	selectObj.empty();
 	selectObj.append('<option value="">选择项目</option>')
 	var optionObj ="<option value=[id]>[name]</option>"
 	for(var i in list){
-		selectObj.append(optionObj.replace("[id]",list[i].id).replace("[name]",list[name]));
+        console.log(( JSON.stringify(list[i].id)));
+        console.log(( JSON.stringify(list[i].name)));
+
+        selectObj.append(optionObj.replace("[id]",list[i].id).replace("[name]",list[i].name));
+
 	}
+     /*var select=$();
+ select.empty();
+ for(var i in list){
+     select.append("<option value='"+list.id+"'> "+list.name+"</option>")
+  }*/
  }
 
 

@@ -106,7 +106,7 @@ public class OrganizationController {
     @RequestMapping("findOrgIdAndNames")
     @ResponseBody
     public  JsonResult findOrgIdAndName(){
-        Map<String,Object> map=organizationService.findIdAndName();
+        List<Map<String,Object>> map=organizationService.findIdAndName();
         return new JsonResult(map);
     }
  /* findObjects

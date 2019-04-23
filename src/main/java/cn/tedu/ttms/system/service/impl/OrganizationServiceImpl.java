@@ -71,9 +71,12 @@ public class OrganizationServiceImpl implements OrganizationService{
     }
 
     @Override
-    public Map<String,Object> findIdAndName() {
-       Map<String,Object> map= organizationDao.findIdAndNames();
-       return map;
+    public List<Map<String,Object>> findIdAndName() {
+       List<Map<String,Object>> list= organizationDao.findIdAndNames();
+       if(list==null){
+            throw  new RuntimeException("没有找到相关的Organization Id和Name");
+        }
+       return list;
     }
 
     @Override

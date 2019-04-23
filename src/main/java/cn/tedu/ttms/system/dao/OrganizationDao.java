@@ -19,7 +19,7 @@ import java.util.Map;
 public interface OrganizationDao extends BaseDao<Organization> {
       List<Map<String, Object>> findOrgObjects(@Param("entity")Organization organization,@Param("pageObject")PageObject pageObject) ;
       int getOrgRowsCounts(@Param("entity")Organization organization);
-      Map<String,Object> findIdAndNames();
+      List<Map<String,Object>> findIdAndNames();
       int doValidById(@Param(value = "ids") String[] ids,@Param(value = "valid") Integer valid);
 
 
