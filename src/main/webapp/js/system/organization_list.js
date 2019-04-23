@@ -5,7 +5,7 @@ $(document).ready(function(){
 	$("#queryFormId").on('click','.btn-valid,.btn-invalid',doValidById);	
 	$('#queryFormId').on('click','.childOrgs',doGetChildObjects);
     /*$('selectProjectId').on("change",'select#status',function() {
-        console.log($(this).val());
+        console.logs($(this).val());
         $('#searchNameId').val=$(this).val();
     }*/
 	doGetInitObjects();

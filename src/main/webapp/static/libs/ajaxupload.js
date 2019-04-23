@@ -9,7 +9,7 @@
     /* jslint browser: true, devel: true, undef: true, nomen: true, bitwise: true, regexp: true, newcap: true, immed: true */
     
     /**
-     * Wrapper for FireBug's console.log
+     * Wrapper for FireBug's console.logs
      */
     function log(){
         if (typeof(console) != 'undefined' && typeof(console.log) == 'function'){            

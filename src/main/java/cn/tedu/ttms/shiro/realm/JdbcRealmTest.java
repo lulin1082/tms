@@ -22,7 +22,7 @@ public class JdbcRealmTest {
         protected static final String DEFAULT_SALTED_AUTHENTICATION_QUERY = "select password, password_salt from users where username = ?";
         protected static final String DEFAULT_USER_ROLES_QUERY = "select role_name from user_roles where username = ?";
         protected static final String DEFAULT_PERMISSIONS_QUERY = "select permission from roles_permissions where role_name = ?";
-        private static final Logger log = LoggerFactory.getLogger(JdbcRealm.class);
+        private static final Logger logs = LoggerFactory.getLogger(JdbcRealm.class);
         protected DataSource dataSource;
         protected String authenticationQuery = "select password from users where username = ?";
         protected String userRolesQuery = "select*/

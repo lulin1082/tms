@@ -68,10 +68,10 @@ public class HttpAspect {
 
 
     @Pointcut("execution(public * cn.tedu.ttms.*.controller.*(..))")
-    public void log() {
+    public void logs() {
     }
 
-    @Before("log()")
+    @Before("logs()")
     public void doBefore(JoinPoint joinPoint) {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
@@ -92,12 +92,12 @@ public class HttpAspect {
         logger.info("args={}", joinPoint.getArgs());
     }
 
-    @After("log()")
+    @After("logs()")
     public void doAfter() {
         logger.info("222222222222");
     }
 
-    @AfterReturning(returning = "object", pointcut = "log()")
+    @AfterReturning(returning = "object", pointcut = "logs()")
     public void doAfterReturning(Object object) {
         logger.info("response={}", object.toString());
     }

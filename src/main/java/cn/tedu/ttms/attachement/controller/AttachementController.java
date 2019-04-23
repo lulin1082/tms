@@ -44,9 +44,7 @@ public class AttachementController {
 		//http://localhost:8080/ttms2.0/....
 		String serverPath= request.getServletContext().getRealPath("/");
 		System.out.println("realPath="+serverPath);
-		attachementService.saveObject(
-				title,athType,belongId,
-				mFile,serverPath);
+		attachementService.saveObject(title,athType,belongId, mFile,serverPath);
 		return new JsonResult();
 	}
 	
